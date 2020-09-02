@@ -514,7 +514,7 @@ Services
   color: var(--clr-primary-9);
 }
 .service-react:hover {
-  background: var(--clr-primary-7);
+  background: blue;
 }
 .service-angular:hover {
   background: var(--clr-red-dark);

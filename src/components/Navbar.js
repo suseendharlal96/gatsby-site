@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} alt="logo" />
+          <h3>Suseendhar Lal</h3>
           <button type="button" className="toggle-btn">
             <FaAlignRight></FaAlignRight>
           </button>
