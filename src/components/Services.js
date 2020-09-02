@@ -6,8 +6,8 @@ const Services = () => {
     <section className="section bg-grey">
       <Title title="Things I'm good at" />
       <div className="section-center services-center">
-        {services.map(({ id, icon, title, text }) => (
-          <article key={id} className="service">
+        {services.map(({ id, icon, title, text, css }) => (
+          <article key={id} className={`service service-${css}`}>
             {icon}
             <h4>{title}</h4>
             <div className="underline"></div>

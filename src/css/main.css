@@ -509,9 +509,33 @@ Services
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
-.service:hover {
+.service {
   background: var(--clr-primary-5);
   color: var(--clr-primary-9);
+}
+.service-react:hover {
+  background: var(--clr-primary-7);
+}
+.service-angular:hover {
+  background: var(--clr-red-dark);
+}
+.service-vue:hover {
+  background: var(--clr-green-dark);
+}
+.service-node:hover {
+  background: darkgreen;
+}
+.service-mongo:hover {
+  background: green;
+}
+.service-gatsby:hover {
+  background: purple;
+}
+.service-apollo:hover {
+  background: gray;
+}
+.service-next:hover {
+  background: black;
 }
 .service:hover p {
   color: var(--clr-primary-9);
