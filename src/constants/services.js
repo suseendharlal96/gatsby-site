@@ -1,14 +1,8 @@
 import React from "react"
-import {
-  FaReact,
-  FaAngular,
-  FaVuejs,
-  SiNodeDotJs,
-  SiApollographql,
-  GrGatsbyjs,
-  SiNextDotJs,
-  DiMongodb,
-} from "react-icons/fa"
+import { FaReact, FaAngular, FaVuejs } from "react-icons/fa"
+import { GrGatsbyjs } from "react-icons/gr"
+import { DiMongodb } from "react-icons/di"
+import { SiNodeDotJs, SiApollographql, SiNextDotJs } from "react-icons/si"
 export default [
   {
     id: 1,

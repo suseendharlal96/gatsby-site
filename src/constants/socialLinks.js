@@ -1,12 +1,12 @@
 import React from "react"
 import {
   FaFacebookSquare,
-  SiGmail,
   FaLinkedin,
   FaMediumM,
-  GoMarkGithub,
   FaTwitterSquare,
 } from "react-icons/fa"
+import { SiGmail } from "react-icons/si"
+import { GoMarkGithub } from "react-icons/go"
 
 const data = [
   {

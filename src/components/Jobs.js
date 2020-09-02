@@ -5,34 +5,34 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 
 const Jobs = () => {
-  const {
-    data: {
-      allStrapiJobs: {
-        nodes: { jobs },
-      },
-    },
-  } = useStaticQuery(graphql`
-    query {
-      allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
-        nodes {
-          strapiId
-          company
-          date
-          position
-          desc {
-            id
-            name
-          }
-        }
-      }
-    }
-  `)
-  const [value, setValue] = useState(0)
-  const { company, position, data, desc } = jobs[value]
+  // const {
+  //   data: {
+  //     allStrapiJobs: {
+  //       nodes: { jobs },
+  //     },
+  //   },
+  // } = useStaticQuery(graphql`
+  //   query {
+  //     allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
+  //       nodes {
+  //         strapiId
+  //         company
+  //         date
+  //         position
+  //         desc {
+  //           id
+  //           name
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // const [value, setValue] = useState(0)
+  // const { company, position, data, desc } = jobs[value]
   return (
     <section className="section-jobs">
       <Title title="Experience" />
-      <div className="jobs-center">
+      {/* <div className="jobs-center">
         <div className="btn-container">
           {jobs.map((job, index) => (
             <button
@@ -58,7 +58,7 @@ const Jobs = () => {
       </div>
       <Link to="/about" className="btn center-btn">
         more info
-      </Link>
+      </Link> */}
     </section>
   )
 }
