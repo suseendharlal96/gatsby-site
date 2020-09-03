@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Hero from "../components/Hero"
+import Profile from "../components/Profile"
 import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
@@ -10,7 +10,7 @@ import Blogs from "../components/Blogs"
 export default () => {
   return (
     <Layout>
-      <Hero />
+      <Profile />
       <Services />
       {/* <Jobs /> */}
       {/* <Projects projects={projects} title="featured projects" showLink /> */}
