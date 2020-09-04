@@ -35,7 +35,11 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </article>
-        <Image fixed={data.file.childImageSharp.fixed} className="hero-img" />
+        <Image
+          fixed={data.file.childImageSharp.fixed}
+          className="hero-img"
+          style={{ position: "absolute", right: "0px" }}
+        />
       </div>
     </header>
   )

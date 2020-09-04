@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 const contact = () => {
   return (
     <Layout>
-      <SEO title="Contact" />
+      {/* <SEO title="Contact" /> */}
       <section className="contact-page">
         <article className="contact-form">
           <h3>get in touch</h3>
