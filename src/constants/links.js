@@ -18,11 +18,6 @@ const data = [
   },
   {
     id: 4,
-    text: "blog",
-    url: "/blog/",
-  },
-  {
-    id: 5,
     text: "contact",
     url: "/contact/",
   },
@@ -35,8 +30,6 @@ const tempLinks = data.map(link => {
     </li>
   )
 })
-// I KNOW WE CAN COMBINE IT !!!!!
-
 export default ({ styleClass }) => {
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>

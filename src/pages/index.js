@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Profile from "../components/Profile"
 import Services from "../components/Services"
 import Jobs from "../components/Jobs"
@@ -10,25 +11,26 @@ import Blogs from "../components/Blogs"
 export default () => {
   const featuredProjects = useStaticQuery(graphql`
     {
-      projects: allMarkdownRemark(
-        filter: { frontmatter: { featured: { eq: "true" } } }
-      ) {
+      projects: allContentfulProjects(filter: { featured: { eq: true } }) {
         nodes {
-          html
-          frontmatter {
-            title
-            github
-            live
-            tags
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          id
+          title
+          github
+          live
+          featured
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
             }
           }
-          excerpt
+          tag {
+            stack
+          }
+          desc {
+            childMarkdownRemark {
+              html
+            }
+          }
         }
       }
     }
@@ -36,6 +38,7 @@ export default () => {
   console.log(featuredProjects)
   return (
     <Layout>
+      <SEO title="Home" />
       <Profile />
       <Services />
       {/* <Jobs /> */}

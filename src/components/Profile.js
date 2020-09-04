@@ -9,7 +9,7 @@ const Hero = () => {
     query {
       file(relativePath: { eq: "susee.jpg" }) {
         childImageSharp {
-          fixed(height: 500, width: 500) {
+          fixed(height: 650, width: 500) {
             ...GatsbyImageSharpFixed
           }
         }

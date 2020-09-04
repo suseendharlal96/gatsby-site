@@ -6,6 +6,7 @@ import Footer from "./Footer"
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleSidebar = () => {
+    console.log(1)
     setIsOpen(!isOpen)
   }
   return (

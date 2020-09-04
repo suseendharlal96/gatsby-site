@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Suseendhar",
@@ -32,18 +36,14 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: `http://localhost:1337`,
-    //     queryLimit: 1000, // Default to 100
-    //     //   contentTypes : `jobs`, `projects`, `blogs`,
-    //     //   singleType : `about`
-    //     //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-    //     contentTypes: [`jobs`],
-    //     singleTypes: [],
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
@@ -59,6 +59,6 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-catch-links`,
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
   ],
 }
