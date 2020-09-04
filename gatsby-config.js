@@ -32,18 +32,18 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [`jobs`],
-        singleTypes: [],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: `http://localhost:1337`,
+    //     queryLimit: 1000, // Default to 100
+    //     //   contentTypes : `jobs`, `projects`, `blogs`,
+    //     //   singleType : `about`
+    //     //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+    //     contentTypes: [`jobs`],
+    //     singleTypes: [],
+    //   },
+    // },
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
