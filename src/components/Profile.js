@@ -7,10 +7,10 @@ import SocialLinks from "../constants/socialLinks"
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "susee-orig.png" }) {
+      file(relativePath: { eq: "susee-bw.png" }) {
         childImageSharp {
-          fixed(height: 650, width: 500) {
-            ...GatsbyImageSharpFixed
+          fluid(height: 650, width: 500) {
+            ...GatsbyImageSharpfluid
           }
         }
       }
@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
         </article>
         <Image
-          fixed={data.file.childImageSharp.fixed}
+          fluid={data.file.childImageSharp.fluid}
           className="hero-img"
           style={{ position: "absolute", right: "0px" }}
         />
