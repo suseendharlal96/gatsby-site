@@ -10,7 +10,7 @@ const Hero = () => {
       file(relativePath: { eq: "susee-bw.png" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpfluid
+            ...GatsbyImageSharpFluid
           }
         }
       }
