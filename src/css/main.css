@@ -443,9 +443,9 @@ Hero
 @media screen and (min-width: 992px) {
   .hero::before {
     content: "";
-    position: relative;
+    position: absolute;
     top: 0;
-    /* left: 65%; */
+    left: 65%;
     right: 0;
     bottom: 0;
     background: var(--clr-white);
