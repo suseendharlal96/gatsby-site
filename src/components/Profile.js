@@ -9,8 +9,8 @@ const Hero = () => {
     query {
       file(relativePath: { eq: "susee-bw.png" }) {
         childImageSharp {
-          fluid(height: 650, width: 500) {
-            ...GatsbyImageSharpfluid
+          fixed(height: 650, width: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
