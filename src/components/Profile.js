@@ -9,8 +9,8 @@ const Hero = () => {
     query {
       file(relativePath: { eq: "susee-bw.png" }) {
         childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+          fluid(height: 650, width: 500) {
+            ...GatsbyImageSharpfluid
           }
         }
       }
@@ -35,7 +35,7 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </article>
-        <Image fluid={data.file.childImageSharp.fluid} className="hero-img" />
+        <Image fixed={data.file.childImageSharp.fixed} className="hero-img" />
       </div>
     </header>
   )
