@@ -7,7 +7,7 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
   console.log(data, tag)
   return (
     <Layout>
-      <SEO title="Project Tags" />
+      <SEO title={tag} />
       <Projects
         title={`${
           data.projects.nodes.length > 1
