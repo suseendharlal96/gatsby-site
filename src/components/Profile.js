@@ -35,11 +35,7 @@ const Hero = () => {
             <SocialLinks />
           </div>
         </article>
-        <Image
-          fluid={data.file.childImageSharp.fluid}
-          className="hero-img"
-          style={{ position: "absolute", right: "0px" }}
-        />
+        <Image fluid={data.file.childImageSharp.fluid} className="hero-img" />
       </div>
     </header>
   )
