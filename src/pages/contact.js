@@ -7,6 +7,10 @@ const contact = () => {
     <Layout>
       <SEO title="Contact Me" />
       <section className="contact-page">
+        <h3 style={{ textAlign: "center", padding: "0px 180px 12px 180px" }}>
+          Whether you would like to hire me, further enquire about any of my
+          work, or you just want to say hello, I would love to hear from you :)
+        </h3>
         <article className="contact-form">
           <h3>get in touch</h3>
           <form action="https://formspree.io/xpzygegl" method="POST">

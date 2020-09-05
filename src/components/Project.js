@@ -1,6 +1,8 @@
 import React from "react"
+import { Link } from "gatsby"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import slugify from "../util/slugify"
 const Project = ({
   title,
   github,
@@ -14,17 +16,25 @@ const Project = ({
 }) => {
   return (
     <article className="project">
-      {image && <Image fluid={image.fluid} className="project-img" />}
+      {/* <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}> */}
+        {image && <Image fluid={image.fluid} className="project-img" />}
+      {/* </Link> */}
       <div className="project-info">
-        <span className="project-number">0{index + 1}.</span>
+        <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}>
+        {index >= 0 && <span className="project-number">0{index + 1}.</span>}
         <h3>{title || "default title"}</h3>
         <div
           className="project-desc"
           dangerouslySetInnerHTML={{ __html: html }}
-        />
+          />
+          </Link>
         <div className="project-stack">
           {stack.map((item, index) => {
-            return <span key={index}>{item}</span>
+            return (
+              <Link key={index} to={`/projects/${slugify(item)}`}>
+                <span>{item}</span>
+              </Link>
+            )
           })}
         </div>
         <div className="project-links">

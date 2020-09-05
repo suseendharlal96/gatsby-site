@@ -464,7 +464,7 @@ Hero
   .hero-img {
     display: block;
     grid-row: 1/1;
-    grid-column: 6/-1;
+    grid-column: 7/-1;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -594,9 +594,6 @@ Jobs
 .active-btn {
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
-}
-.job-info {
-  /* min-height: 420px; */
 }
 .job-info h3 {
   font-weight: 400;
@@ -972,7 +969,7 @@ Contact Page
 .contact-page {
   display: grid;
   place-items: center;
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 .contact-form {
   background: var(--clr-white);
