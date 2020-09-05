@@ -7,7 +7,7 @@ import SocialLinks from "../constants/socialLinks"
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "susee.jpg" }) {
+      file(relativePath: { eq: "susee-orig.jpg" }) {
         childImageSharp {
           fixed(height: 650, width: 500) {
             ...GatsbyImageSharpFixed
