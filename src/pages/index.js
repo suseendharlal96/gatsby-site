@@ -18,7 +18,6 @@ export default () => {
       }
     }
   `)
-  console.log(featuredProjects)
   return (
     <Layout>
       <SEO title="Home" />

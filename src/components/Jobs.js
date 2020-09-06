@@ -19,7 +19,6 @@ const Jobs = () => {
     }
   `)
   const [value, setValue] = useState(0)
-  console.log(data)
   const { name, designation, mydate, description } = data.jobs.nodes[value]
   return (
     <section className="section-jobs">

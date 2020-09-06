@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const SingleTag = ({ data, pageContext: { tag } }) => {
-  console.log(data, tag)
   return (
     <Layout>
       <SEO title={tag} />

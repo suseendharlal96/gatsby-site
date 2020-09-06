@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 const ProjectPagination = ({ currentPage, totalPages }) => {
-  console.log(currentPage)
   const isFirst = currentPage === 1
   const isLast = currentPage === totalPages
   const prevPage =

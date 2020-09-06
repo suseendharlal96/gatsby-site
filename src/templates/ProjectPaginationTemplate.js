@@ -8,7 +8,6 @@ const ProjectPaginationTemplate = ({
   data,
   pageContext: { currentPage, totalPages, skip },
 }) => {
-  console.log(data, currentPage)
   return (
     <Layout>
       <SEO title={`Page ${currentPage}`} />
