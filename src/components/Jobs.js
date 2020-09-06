@@ -39,7 +39,7 @@ const Jobs = () => {
         <article className="job-info">
           <h3>{designation}</h3>
           <h4>{name}</h4>
-          <p className="job-date">{mydate}</p>
+          <h3 className="job-date">{mydate}</h3>
           <div className="job-desc">
             <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
             <p>{description}</p>

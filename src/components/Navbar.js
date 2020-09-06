@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../assets/logo.svg"
+import { Link } from "gatsby"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "../constants/links"
 const Navbar = ({ toggleSidebar }) => {
@@ -7,7 +7,11 @@ const Navbar = ({ toggleSidebar }) => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <h3>Suseendhar Lal</h3>
+          <Link to="/">
+            <h3
+              style={{ fontFamily: "cursive", color: "darkcyan" }}
+            >{`{{<Suseendhar Lal/>}}`}</h3>
+          </Link>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight></FaAlignRight>
           </button>

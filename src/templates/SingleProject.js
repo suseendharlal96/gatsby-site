@@ -18,23 +18,7 @@ const SingleProject = ({ data: { project }, pageContext: { title } }) => {
 export const query = graphql`
   query GetSingleproject($title: String!) {
     project: contentfulProjects(title: { eq: $title }) {
-      id
-      title
-      github
-      live
-      image {
-        fluid {
-          ...GatsbyContentfulFluid
-        }
-      }
-      tag {
-        stack
-      }
-      desc {
-        childMarkdownRemark {
-          html
-        }
-      }
+      ...projectFragment
     }
   }
 `

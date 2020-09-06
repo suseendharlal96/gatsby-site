@@ -12,25 +12,8 @@ export default () => {
   const featuredProjects = useStaticQuery(graphql`
     {
       projects: allContentfulProjects(filter: { featured: { eq: true } }) {
-        nodes {
-          id
-          title
-          github
-          live
-          featured
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-          tag {
-            stack
-          }
-          desc {
-            childMarkdownRemark {
-              html
-            }
-          }
+        nodes{
+          ...projectFragment
         }
       }
     }

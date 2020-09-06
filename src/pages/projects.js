@@ -9,25 +9,8 @@ const ProjectsPage = () => {
   const allProjects = useStaticQuery(graphql`
     {
       projects: allContentfulProjects {
-        nodes {
-          id
-          title
-          github
-          live
-          featured
-          image {
-            fluid {
-              ...GatsbyContentfulFluid
-            }
-          }
-          tag {
-            stack
-          }
-          desc {
-            childMarkdownRemark {
-              html
-            }
-          }
+        nodes{
+          ...projectFragment
         }
       }
     }

@@ -17,17 +17,21 @@ const Project = ({
   return (
     <article className="project">
       {/* <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}> */}
-        {image && <Image fluid={image.fluid} className="project-img" />}
+      {image && <Image fluid={image.fluid} className="project-img" />}
       {/* </Link> */}
       <div className="project-info">
         <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}>
-        {index >= 0 && <span className="project-number">0{index + 1}.</span>}
-        <h3>{title || "default title"}</h3>
-        <div
-          className="project-desc"
-          dangerouslySetInnerHTML={{ __html: html }}
+          {index >= 0 && (
+            <span className="project-number">
+              {index + 1 <= 9 ? "0" + (index + 1) : index + 1}.
+            </span>
+          )}
+          <h3>{title || "default title"}</h3>
+          <div
+            className="project-desc"
+            dangerouslySetInnerHTML={{ __html: html }}
           />
-          </Link>
+        </Link>
         <div className="project-stack">
           {stack.map((item, index) => {
             return (
