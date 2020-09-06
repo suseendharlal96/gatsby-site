@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
@@ -17,10 +17,6 @@ const Hero = () => {
     }
   `)
 
-  useEffect(() => {
-    console.log(data)
-  }, [])
-
   return (
     <header className="hero">
       <div className="section-center hero-center">
@@ -29,9 +25,9 @@ const Hero = () => {
             <div className="underline"></div>
             <h1>Full Stack Developer</h1>
             <h4>
-              Hello, I'm Suseendhar. I love creating high quality websites
-              and apps that use the latest and greatest tools out there to
-              maximize UI and UX quality.
+              Hello, I'm Suseendhar. I love creating high quality websites and
+              apps that use the latest and greatest tools out there to maximize
+              UI and UX quality.
             </h4>
             <Link to="/contact" className="btn">
               contact me

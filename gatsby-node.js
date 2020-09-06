@@ -19,6 +19,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const template = {
     singleProject: path.resolve("./src/templates/SingleProject.js"),
     tagProject: path.resolve("./src/templates/SingleTag.js"),
+    projectPagination: path.resolve(
+      "./src/templates/ProjectPaginationTemplate.js"
+    ),
   }
   const { data } = await graphql(`
     {
@@ -60,6 +63,26 @@ exports.createPages = async ({ graphql, actions }) => {
         component: template.tagProject,
         context: { tag },
       })
+    })
+
+    const projectsPerPage = 3
+    const totalPages = Math.ceil(projects.length / projectsPerPage)
+    Array.from({ length: totalPages }).map((_, index) => {
+      const currentPage = index + 1
+      if (index === 0) {
+        return
+      } else {
+        createPage({
+          path: `/projects/page/${currentPage}`,
+          component: template.projectPagination,
+          context: {
+            limit: projectsPerPage,
+            skip: index * projectsPerPage,
+            currentPage,
+            totalPages,
+          },
+        })
+      }
     })
   }
 }

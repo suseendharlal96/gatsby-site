@@ -2,13 +2,15 @@ import React from "react"
 import Title from "./Title"
 import Project from "./Project"
 import { Link } from "gatsby"
-const Projects = ({ projects, title, showLink }) => {
+const Projects = ({ projects, title, showLink, skip }) => {
   return (
     <section className="section projects">
       <Title title={title} />
       <div className="section-center projects-center">
         {projects.map((project, index) => {
-          return <Project key={project.id} index={index} {...project} />
+          return (
+            <Project key={project.id} skip={skip} index={index} {...project} />
+          )
         })}
       </div>
       {showLink && (

@@ -7,6 +7,7 @@ const Project = ({
   title,
   github,
   live,
+  skip,
   desc: {
     childMarkdownRemark: { html },
   },
@@ -23,7 +24,14 @@ const Project = ({
         <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}>
           {index >= 0 && (
             <span className="project-number">
-              {index + 1 <= 9 ? "0" + (index + 1) : index + 1}.
+              {skip
+                ? skip + index + 1 <= 9
+                  ? "0" + (skip + index + 1)
+                  : skip + index + 1
+                : index + 1 <= 9
+                ? "0" + (index + 1)
+                : index + 1}
+              .
             </span>
           )}
           <h3>{title || "default title"}</h3>
@@ -42,10 +50,10 @@ const Project = ({
           })}
         </div>
         <div className="project-links">
-          <a href={github}>
+          <a rel="noreferrer noopener" target="_blank" href={github}>
             <FaGithubSquare className="project-icon" />
           </a>
-          <a href={live}>
+          <a rel="noreferrer noopener" target="_blank" href={live}>
             <FaShareSquare className="project-icon" />
           </a>
         </div>

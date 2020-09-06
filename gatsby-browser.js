@@ -1,5 +1,5 @@
 import "./src/css/main.css"
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
 /**
  * Implement Gatsby's Browser APIs in this file.
  require('prismjs/themes/prism-okaidia.css')

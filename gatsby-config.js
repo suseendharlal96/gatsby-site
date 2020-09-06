@@ -11,7 +11,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Suseendhar",
-    description: "This is a Portfolio Site",
+    description: "Suseendhar's Portfolio",
     author: "@suseendharlal",
     twitterUsername: "@SuseendharL",
     image: "/twitter-img.png",
@@ -60,5 +60,6 @@ module.exports = {
     // },
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
   ],
 }

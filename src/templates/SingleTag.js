@@ -27,24 +27,7 @@ export const tagQuery = graphql`
       filter: { tag: { stack: { in: [$tag] } } }
     ) {
       nodes {
-        id
-        title
-        github
-        featured
-        desc {
-          childMarkdownRemark {
-            html
-          }
-        }
-        live
-        tag {
-          stack
-        }
-        image {
-          fluid {
-            ...GatsbyContentfulFluid
-          }
-        }
+        ...projectFragment
       }
     }
   }

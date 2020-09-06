@@ -29,7 +29,7 @@ const Jobs = () => {
           {data.jobs.nodes.map((job, index) => (
             <button
               key={job.id}
-              className={`job-btn ${index == value && "active-btn"}`}
+              className={`job-btn ${index === value && "active-btn"}`}
               onClick={() => setValue(index)}
             >
               {job.name}
