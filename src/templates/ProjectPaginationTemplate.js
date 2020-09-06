@@ -17,8 +17,13 @@ const ProjectPaginationTemplate = ({
           title="all projects"
           skip={skip}
           projects={data.projects.nodes}
-          showLink
         />
+        <div style={{ paddingBottom: "2%" }}>
+          <ProjectPagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+          />
+        </div>
       </section>
     </Layout>
   )

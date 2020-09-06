@@ -26,6 +26,12 @@ const ProjectsPage = () => {
           totalPages={Math.ceil(allProjects.projects.totalCount / 3)}
         />
         <Projects projects={allProjects.projects.nodes} title="all projects" />
+        <div style={{ paddingBottom: "2%" }}>
+          <ProjectPagination
+            currentPage={1}
+            totalPages={Math.ceil(allProjects.projects.totalCount / 3)}
+          />
+        </div>
       </section>
     </Layout>
   )

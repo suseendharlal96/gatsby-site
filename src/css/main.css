@@ -654,6 +654,10 @@ Jobs
 .job-icon {
   color: var(--clr-primary-5);
 }
+.btn-pagination {
+  flex-direction: row;
+  padding-top: 2%;
+}
 @media screen and (min-width: 992px) {
   .jobs-center {
     width: 90vw;
@@ -667,11 +671,8 @@ Jobs
   }
   .btn-pagination {
     flex-direction: row;
-    position: absolute;
-    padding: 0 10px;
-    left: 36.5%;
-    width: 100%;
-    margin-top: 2%;
+    margin-left: 36.5%;
+    padding-top: 2%;
   }
   .job-btn {
     margin-bottom: 1rem;
