@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="underline"></div>
             <h1>Full Stack Developer</h1>
             <h4>
-              Hello, my name is Suseedhar. I love creating high quality websites
+              Hello, I'm Suseendhar. I love creating high quality websites
               and apps that use the latest and greatest tools out there to
               maximize UI and UX quality.
             </h4>
