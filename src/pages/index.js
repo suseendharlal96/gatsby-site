@@ -41,7 +41,7 @@ export default () => {
       <SEO title="Home" />
       <Profile />
       <Services />
-      {/* <Jobs /> */}
+      <Jobs />
       <Projects
         projects={featuredProjects.projects.nodes}
         title="featured projects"

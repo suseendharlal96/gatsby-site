@@ -5,60 +5,50 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 
 const Jobs = () => {
-  // const {
-  //   data: {
-  //     allStrapiJobs: {
-  //       nodes: { jobs },
-  //     },
-  //   },
-  // } = useStaticQuery(graphql`
-  //   query {
-  //     allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
-  //       nodes {
-  //         strapiId
-  //         company
-  //         date
-  //         position
-  //         desc {
-  //           id
-  //           name
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const [value, setValue] = useState(0)
-  // const { company, position, data, desc } = jobs[value]
+  const data = useStaticQuery(graphql`
+    query {
+      jobs: allContentfulJobs {
+        nodes {
+          id
+          name
+          mydate
+          designation
+          description
+        }
+      }
+    }
+  `)
+  const [value, setValue] = useState(0)
+  console.log(data)
+  const { name, designation, mydate, description } = data.jobs.nodes[value]
   return (
     <section className="section-jobs">
       <Title title="Experience" />
-      {/* <div className="jobs-center">
+      <div className="jobs-center">
         <div className="btn-container">
-          {jobs.map((job, index) => (
+          {data.jobs.nodes.map((job, index) => (
             <button
-              key={job.strapiId}
+              key={job.id}
               className={`job-btn ${index == value && "active-btn"}`}
               onClick={() => setValue(index)}
             >
-              {job.company}
+              {job.name}
             </button>
           ))}
         </div>
         <article className="job-info">
-          <h3>{position}</h3>
-          <h4>{company}</h4>
-          <p className="job-date">{date}</p>
-          {desc.map(item => (
-            <div key={item.id} className="job-desc">
-              <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
-              <p>{item.name}</p>
-            </div>
-          ))}
+          <h3>{designation}</h3>
+          <h4>{name}</h4>
+          <p className="job-date">{mydate}</p>
+          <div className="job-desc">
+            <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+            <p>{description}</p>
+          </div>
         </article>
       </div>
       <Link to="/about" className="btn center-btn">
         more info
-      </Link> */}
+      </Link>
     </section>
   )
 }
