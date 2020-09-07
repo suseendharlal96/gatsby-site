@@ -10,7 +10,6 @@ const ProjectsTagPagination = ({
   pageContext: { currentPage, totalPages, skip, tag },
 }) => {
   console.log(data)
-  console.log(context)
   return (
     <Layout>
       <SEO />
