@@ -22,6 +22,9 @@ exports.createPages = async ({ graphql, actions }) => {
     projectPagination: path.resolve(
       "./src/templates/ProjectPaginationTemplate.js"
     ),
+    projectsTagPagination: path.resolve(
+      "./src/templates/ProjectsTagPaginationTemplate.js"
+    ),
   }
   const { data } = await graphql(`
     {
@@ -65,6 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
+    // pagination in projects page
     const projectsPerPage = 3
     const totalPages = Math.ceil(projects.length / projectsPerPage)
     Array.from({ length: totalPages }).map((_, index) => {
@@ -83,6 +87,34 @@ exports.createPages = async ({ graphql, actions }) => {
           },
         })
       }
+    })
+    const allTags = {}
+    projects.forEach(pro => {
+      pro.tag.stack.forEach(t => {
+        allTags[t] = (allTags[t] || 0) + 1
+        if (allTags[t] > 3) {
+          const tagsPerPage = 3
+          const totalPages = Math.ceil(allTags[t] / tagsPerPage)
+          Array.from({ length: totalPages }).map((_, index) => {
+            const currentPage = index + 1
+            if (index === 0) {
+              return
+            } else {
+              createPage({
+                path: `/projects/${t}/${currentPage}`,
+                component: template.projectsTagPagination,
+                context: {
+                  limit: tagsPerPage,
+                  skip: index * tagsPerPage,
+                  currentPage,
+                  totalPages,
+                  tag: t,
+                },
+              })
+            }
+          })
+        }
+      })
     })
   }
 }

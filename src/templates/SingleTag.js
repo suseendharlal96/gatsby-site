@@ -7,6 +7,12 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
   return (
     <Layout>
       <SEO title={tag} />
+      {data.projects.nodes.length > 3 && (
+        <ProjectPagination
+          currentPage={1}
+          totalPages={data.projects.totalCount / 3}
+        />
+      )}
       <Projects
         title={`${
           data.projects.nodes.length > 1
@@ -16,6 +22,12 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
         projects={data.projects.nodes}
         showLink
       />
+      {data.projects.nodes.length > 3 && (
+        <ProjectPagination
+          currentPage={1}
+          totalPages={data.projects.totalCount / 3}
+        />
+      )}
     </Layout>
   )
 }
@@ -28,6 +40,7 @@ export const tagQuery = graphql`
       nodes {
         ...projectFragment
       }
+      totalCount
     }
   }
 `
