@@ -6,8 +6,8 @@ const ProjectsTagPagination = ({ data, context }) => {
   return <div>ProjectsTagPagination</div>
 }
 
-export const tagQuery = graphql`
-  query singleTag($tag: String!, $limit: Int!, $skip: Int!) {
+export const tagPaginationQuery = graphql`
+  query tagPaginationQuery($tag: String!, $limit: Int!, $skip: Int!) {
     projects: allContentfulProjects(
       filter: { tag: { stack: { in: [$tag] } } }
       limit: $limit
