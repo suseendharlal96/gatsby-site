@@ -8,27 +8,33 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
   return (
     <Layout>
       <SEO title={tag} />
-      {data.projects.nodes.length > 3 && (
-        <ProjectPagination
-          currentPage={1}
-          totalPages={data.projects.totalCount / 3}
+      <section className="projects-page">
+        {data.projects.nodes.length > 3 && (
+          <ProjectPagination
+            tag={tag}
+            currentPage={1}
+            totalPages={data.projects.totalCount / 3}
+          />
+        )}
+        <Projects
+          title={`${
+            data.projects.nodes.length > 1
+              ? data.projects.nodes.length + " Projects"
+              : data.projects.nodes.length + " Project"
+          } tagged with ${tag}`}
+          projects={data.projects.nodes}
+          showLink
         />
-      )}
-      <Projects
-        title={`${
-          data.projects.nodes.length > 1
-            ? data.projects.nodes.length + " Projects"
-            : data.projects.nodes.length + " Project"
-        } tagged with ${tag}`}
-        projects={data.projects.nodes}
-        showLink
-      />
-      {data.projects.nodes.length > 3 && (
-        <ProjectPagination
-          currentPage={1}
-          totalPages={data.projects.totalCount / 3}
-        />
-      )}
+        {data.projects.nodes.length > 3 && (
+          <div style={{ paddingBottom: "2%" }}>
+            <ProjectPagination
+              tag={tag}
+              currentPage={1}
+              totalPages={data.projects.totalCount / 3}
+            />
+          </div>
+        )}
+      </section>
     </Layout>
   )
 }

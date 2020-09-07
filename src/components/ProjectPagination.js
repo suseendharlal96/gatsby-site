@@ -1,11 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const ProjectPagination = ({ currentPage, totalPages }) => {
+import slugify from "../util/slugify"
+
+const ProjectPagination = ({ currentPage, totalPages, tag }) => {
   const isFirst = currentPage === 1
   const isLast = currentPage === totalPages
   const prevPage =
-    currentPage - 1 === 1 ? "/projects" : `/projects/page/${currentPage - 1}`
+    currentPage - 1 === 1
+      ? tag
+        ? `/projects/${slugify(tag)}`
+        : "/projects"
+      : tag
+      ? `/projects/${slugify(tag)}/${currentPage - 1}`
+      : `/projects/page/${currentPage - 1}`
   const nextPage = `/projects/page/${currentPage + 1}`
   return (
     <div className="btn-pagination">
@@ -21,7 +29,15 @@ const ProjectPagination = ({ currentPage, totalPages }) => {
       {Array.from({ length: totalPages }).map((_, index) => (
         <Link
           key={index}
-          to={`${index === 0 ? "/projects" : `/projects/page/${index + 1}`}`}
+          to={`${
+            index === 0
+              ? tag
+                ? `/projects/${slugify(tag)}`
+                : "/projects"
+              : tag
+              ? `/projects/${slugify(tag)}/${index + 1}`
+              : `/projects/page/${index + 1}`
+          }`}
         >
           <button
             style={{ marginRight: "1%" }}
