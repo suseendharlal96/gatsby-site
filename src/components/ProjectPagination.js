@@ -15,7 +15,7 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
       ? `/projects/${slugify(tag)}/${currentPage - 1}`
       : `/projects/page/${currentPage - 1}`
   const nextPage = tag
-    ? `/projects/${tag}/${currentPage + 1}`
+    ? `/projects/${slugify(tag)}/${currentPage + 1}`
     : `/projects/page/${currentPage + 1}`
   return (
     <div className="btn-pagination">
