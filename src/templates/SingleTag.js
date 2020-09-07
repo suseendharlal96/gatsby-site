@@ -13,16 +13,12 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
           <ProjectPagination
             tag={tag}
             currentPage={1}
-            totalPages={data.projects.totalCount / 3}
+            totalPages={Math.ceil(data.projects.totalCount / 3)}
           />
         )}
         {data.projects.nodes.length > 3 ? (
           <Projects
-            title={`${
-              data.projects.nodes.length > 1
-                ? data.projects.nodes.length + " Projects"
-                : data.projects.nodes.length + " Project"
-            } tagged with ${tag}`}
+            title={`Projects tagged with ${tag}`}
             projects={data.projects.nodes.slice(0, 3)}
             showLink
           />
@@ -42,7 +38,7 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
             <ProjectPagination
               tag={tag}
               currentPage={1}
-              totalPages={data.projects.totalCount / 3}
+              totalPages={Math.ceil(data.projects.totalCount / 3)}
             />
           </div>
         )}
