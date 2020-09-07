@@ -109,6 +109,7 @@ exports.createPages = async ({ graphql, actions }) => {
                   limit: tagsPerPage,
                   skip: index * tagsPerPage,
                   currentPage,
+                  tagCount: allTags[t],
                   totalPages,
                   tag: t,
                 },

@@ -7,7 +7,7 @@ import ProjectPagination from "../components/ProjectPagination"
 
 const ProjectsTagPagination = ({
   data,
-  pageContext: { currentPage, totalPages, skip, tag },
+  pageContext: { currentPage, totalPages, skip, tag, tagCount },
 }) => {
   console.log(data)
   return (
@@ -20,7 +20,7 @@ const ProjectsTagPagination = ({
           totalPages={totalPages}
         />
         <Projects
-          title={`Projects tagged with ${tag}`}
+          title={`${tagCount} projects tagged with ${tag}`}
           skip={skip}
           projects={data.projects.nodes}
           showLink

@@ -18,7 +18,7 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
         )}
         {data.projects.nodes.length > 3 ? (
           <Projects
-            title={`Projects tagged with ${tag}`}
+            title={`${data.projects.nodes.length} projects tagged with ${tag}`}
             projects={data.projects.nodes.slice(0, 3)}
             showLink
           />
