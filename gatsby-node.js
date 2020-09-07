@@ -88,6 +88,8 @@ exports.createPages = async ({ graphql, actions }) => {
         })
       }
     })
+
+    // pagination in projects tag if tag count is more than 3
     const allTags = {}
     projects.forEach(pro => {
       pro.tag.stack.forEach(t => {
