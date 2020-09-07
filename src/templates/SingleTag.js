@@ -2,6 +2,7 @@ import React from "react"
 import Projects from "../components/Projects"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ProjectPagination from "../components/ProjectPagination"
 
 const SingleTag = ({ data, pageContext: { tag } }) => {
   return (
