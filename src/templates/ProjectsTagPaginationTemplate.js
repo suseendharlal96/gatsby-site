@@ -20,11 +20,7 @@ const ProjectsTagPagination = ({
           totalPages={totalPages}
         />
         <Projects
-          title={`${
-            data.projects.nodes.length > 1
-              ? data.projects.nodes.length + " Projects"
-              : data.projects.nodes.length + " Project"
-          } tagged with ${tag}`}
+          title={`Projects tagged with ${tag}`}
           skip={skip}
           projects={data.projects.nodes}
           showLink
