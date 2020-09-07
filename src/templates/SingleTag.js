@@ -16,15 +16,27 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
             totalPages={data.projects.totalCount / 3}
           />
         )}
-        <Projects
-          title={`${
-            data.projects.nodes.length > 1
-              ? data.projects.nodes.length + " Projects"
-              : data.projects.nodes.length + " Project"
-          } tagged with ${tag}`}
-          projects={data.projects.nodes}
-          showLink
-        />
+        {data.projects.nodes.length > 3 ? (
+          <Projects
+            title={`${
+              data.projects.nodes.length > 1
+                ? data.projects.nodes.length + " Projects"
+                : data.projects.nodes.length + " Project"
+            } tagged with ${tag}`}
+            projects={data.projects.nodes.slice(0, 3)}
+            showLink
+          />
+        ) : (
+          <Projects
+            title={`${
+              data.projects.nodes.length > 1
+                ? data.projects.nodes.length + " Projects"
+                : data.projects.nodes.length + " Project"
+            } tagged with ${tag}`}
+            projects={data.projects.nodes}
+            showLink
+          />
+        )}
         {data.projects.nodes.length > 3 && (
           <div style={{ paddingBottom: "2%" }}>
             <ProjectPagination
@@ -43,7 +55,6 @@ export const tagQuery = graphql`
   query singleTag($tag: String!) {
     projects: allContentfulProjects(
       filter: { tag: { stack: { in: [$tag] } } }
-      limit: 3
     ) {
       nodes {
         ...projectFragment
