@@ -43,6 +43,7 @@ export const tagQuery = graphql`
   query singleTag($tag: String!) {
     projects: allContentfulProjects(
       filter: { tag: { stack: { in: [$tag] } } }
+      limit: 3
     ) {
       nodes {
         ...projectFragment
