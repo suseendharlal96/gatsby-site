@@ -24,9 +24,11 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
           Prev
         </button>
       ) : (
-        <button style={{ marginRight: "1%" }} className="btn">
-          <Link to={prevPage}>Prev</Link>
-        </button>
+        <Link to={prevPage}>
+          <button style={{ marginRight: "1%" }} className="btn">
+            Prev
+          </button>
+        </Link>
       )}
       {Array.from({ length: totalPages }).map((_, index) => (
         <Link
