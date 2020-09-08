@@ -23,7 +23,7 @@ const data = [
   },
 ]
 
-class Link extends React.Component {
+class MyLink extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -58,4 +58,4 @@ class Link extends React.Component {
     )
   }
 }
-export default Link
+export default MyLink
