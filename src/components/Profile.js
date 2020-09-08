@@ -37,7 +37,7 @@ const Hero = () => {
         </article>
         <Image
           fluid={data.file.childImageSharp.fluid}
-          style={{ left: "80px" }}
+          style={{ left: "45px" }}
           className="hero-img"
         />
       </div>
