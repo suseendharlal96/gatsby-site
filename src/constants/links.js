@@ -23,20 +23,25 @@ const data = [
   },
 ]
 
-const tempLinks = data.map(link => {
-  return (
-    <li
-      className={window.location.pathname === link.url || window.location.pathname.includes(link.url + '/') ? "active" : ""}
-      key={link.id}
-    >
-      <Link to={link.url}>{link.text}</Link>
-    </li>
-  )
-})
 export default ({ styleClass }) => {
+  const [active, setActive] = useState(false)
+  useEffect(() => {
+    if (
+      window.location.pathname === link.url ||
+      window.location.pathname.includes(link.url + "/")
+    ) {
+      setActive(true)
+    }
+  }, [window.location.pathname])
   return (
     <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-      {tempLinks}
+      {data.map(link => {
+        return (
+          <li className={active ? "active" : ""} key={link.id}>
+            <Link to={link.url}>{link.text}</Link>
+          </li>
+        )
+      })}
     </ul>
   )
 }
