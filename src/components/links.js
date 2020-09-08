@@ -49,7 +49,7 @@ class MyLink extends React.Component {
       >
         {data.map(link => {
           return (
-            <li className={isActive ? "active" : ""} key={link.id}>
+            <li className={this.state.isActive ? "active" : ""} key={link.id}>
               <Link to={link.url}>{link.text}</Link>
             </li>
           )
