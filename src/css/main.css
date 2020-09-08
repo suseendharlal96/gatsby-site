@@ -743,11 +743,12 @@ Projects
 }
 .about-stack span {
   display: inline-block;
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
+  background: darkorange;
+  color: darkblue;
   margin-right: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
+  box-shadow: 5px 5px lightgrey;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
