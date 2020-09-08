@@ -305,6 +305,10 @@ Navbar
   .nav-links li {
     margin-right: 2rem;
   }
+  .nav-links li .active {
+    color: var(--clr-primary-5);
+    box-shadow: 0px 2px var(--clr-primary-5);
+  }
   .nav-links a {
     text-transform: capitalize;
     color: var(--clr-grey-1);

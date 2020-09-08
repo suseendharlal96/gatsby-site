@@ -9,23 +9,26 @@ const data = [
   {
     id: 2,
     text: "about",
-    url: "/about/",
+    url: "/about",
   },
   {
     id: 3,
     text: "projects",
-    url: "/projects/",
+    url: "/projects",
   },
   {
     id: 4,
     text: "contact",
-    url: "/contact/",
+    url: "/contact",
   },
 ]
 
 const tempLinks = data.map(link => {
   return (
-    <li key={link.id}>
+    <li
+      className={window.location.pathname === link.url || window.location.pathname.includes(link.url + '/') ? "active" : ""}
+      key={link.id}
+    >
       <Link to={link.url}>{link.text}</Link>
     </li>
   )
