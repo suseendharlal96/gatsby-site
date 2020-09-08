@@ -69,6 +69,29 @@ body {
   font-size: 0.875rem;
   margin-top: 5rem;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(184, 77%, 34%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-red-dark);
+  border-radius: 10px;
+}
+
 ul {
   list-style-type: none;
 }
