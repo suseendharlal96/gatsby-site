@@ -769,6 +769,7 @@ Projects
 
 .project-stack span:hover {
   background-color: whitesmoke;
+  transition: var(--transition);
 }
 
 .about-stack span {
