@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 const data = [
   {
@@ -23,25 +23,39 @@ const data = [
   },
 ]
 
-export default ({ styleClass }) => {
-  const [active, setActive] = useState(false)
-  useEffect(() => {
-    if (
-      window.location.pathname === link.url ||
-      window.location.pathname.includes(link.url + "/")
-    ) {
-      setActive(true)
+class Link extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isActive: false,
     }
-  }, [window.location.pathname])
-  return (
-    <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-      {data.map(link => {
-        return (
-          <li className={active ? "active" : ""} key={link.id}>
-            <Link to={link.url}>{link.text}</Link>
-          </li>
-        )
-      })}
-    </ul>
-  )
+  }
+  componentDidMount() {
+    if (
+      window.location.pathname === this.props.to ||
+      window.location.pathname.includes(this.props.to + "/")
+    ) {
+      this.setState({
+        isActive: true,
+      })
+    }
+  }
+  render() {
+    return (
+      <ul
+        className={`page-links ${
+          this.props.styleClass ? this.props.styleClass : ""
+        }`}
+      >
+        {data.map(link => {
+          return (
+            <li className={isActive ? "active" : ""} key={link.id}>
+              <Link to={link.url}>{link.text}</Link>
+            </li>
+          )
+        })}
+      </ul>
+    )
+  }
 }
+export default Link
