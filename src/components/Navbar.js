@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FaAlignRight } from "react-icons/fa"
-import PageLinks from "../constants/links"
+import PageLinks from "./links"
 const Navbar = ({ toggleSidebar }) => {
   return (
     <nav className="navbar">
