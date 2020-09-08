@@ -741,7 +741,6 @@ Projects
 .project-stack {
   margin-bottom: 1rem;
 }
-.project-stack span,
 .about-stack span {
   display: inline-block;
   background: var(--clr-grey-9);
@@ -753,9 +752,28 @@ Projects
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
+
+.project-stack span {
+  display: inline-block;
+  background: darkorange;
+  color: darkblue;
+  box-shadow: 5px 5px lightgrey;
+  margin: 0.2rem 0.5rem 0 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.project-stack span:hover {
+  background-color: whitesmoke;
+}
+
 .about-stack span {
   margin-top: 0.5rem;
 }
+
 .project-icon {
   color: var(--clr-primary-5);
   font-size: 2rem;

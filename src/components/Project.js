@@ -21,25 +21,25 @@ const Project = ({
       {image && <Image fluid={image.fluid} className="project-img" />}
       {/* </Link> */}
       <div className="project-info">
+        {index >= 0 && (
+          <span className="project-number">
+            {skip
+              ? skip + index + 1 <= 9
+                ? "0" + (skip + index + 1)
+                : skip + index + 1
+              : index + 1 <= 9
+              ? "0" + (index + 1)
+              : index + 1}
+            .
+          </span>
+        )}
         <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}>
-          {index >= 0 && (
-            <span className="project-number">
-              {skip
-                ? skip + index + 1 <= 9
-                  ? "0" + (skip + index + 1)
-                  : skip + index + 1
-                : index + 1 <= 9
-                ? "0" + (index + 1)
-                : index + 1}
-              .
-            </span>
-          )}
           <h3>{title || "default title"}</h3>
-          <div
-            className="project-desc"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
         </Link>
+        <div
+          className="project-desc"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
         <div className="project-stack">
           {stack.map((item, index) => {
             return (
