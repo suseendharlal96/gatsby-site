@@ -27,19 +27,9 @@ const About = () => {
     { id: "8", title: "MongoDb" },
     { id: "9", title: "GraphQL" },
   ]
-  const talkto = () => {
-    var s1 = document.createElement("script"),
-      s0 = document.getElementsByTagName("script")[0]
-    s1.async = true
-    s1.src = "https://embed.tawk.to/5f59ffd1f0e7167d000f11cc/default"
-    s1.charset = "UTF-8"
-    s1.setAttribute("crossorigin", "*")
-    s0.parentNode.insertBefore(s1, s0)
-  }
   return (
     <Layout>
       <SEO title="About Me" description="about suseendhar" />
-      {talkto}
       <section className="about-page">
         <div className="section-center about-center">
           <Image
