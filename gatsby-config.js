@@ -45,7 +45,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-tawk`,
+      resolve: `gatsby-plugin-tawk.to`,
       options: {
         tawkId: "5f59ffd1f0e7167d000f11cc",
       },
