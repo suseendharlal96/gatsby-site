@@ -44,6 +44,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-tawk`,
+      options: {
+        tawkId: "5f59ffd1f0e7167d000f11cc",
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
