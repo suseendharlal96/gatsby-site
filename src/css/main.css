@@ -582,29 +582,53 @@ Services
   background: var(--clr-primary-5);
   color: #fff;
 }
-.service-react:hover {
-  background: blue;
+.service-react {
+  background: #61dafb;
 }
-.service-angular:hover {
+.service-angular {
   background: var(--clr-red-dark);
 }
-.service-vue:hover {
+.service-vue {
   background: var(--clr-green-dark);
 }
-.service-node:hover {
+.service-node {
   background: darkgreen;
 }
-.service-mongo:hover {
+.service-mongo {
   background: green;
 }
-.service-gatsby:hover {
+.service-gatsby {
   background: purple;
 }
-.service-apollo:hover {
+.service-apollo {
   background: gray;
 }
-.service-next:hover {
+.service-next {
   background: darkturquoise;
+}
+.service-react:hover {
+  box-shadow: 0 5px 15px #00ffb4;
+}
+.service-angular:hover {
+  box-shadow: 0 5px 15px #00ffb4;
+}
+.service-vue:hover {
+  box-shadow: 0 5px 15px #00ffb4;
+}
+.service-node:hover {
+  box-shadow: 0 5px 15px #00ffb4;
+}
+.service-mongo:hover {
+  box-shadow: 0 5px 15px #00ffb4;
+}
+.service-gatsby:hover {
+  box-shadow: 0 5px 15px #00ffb4;
+}
+.service-apollo:hover {
+  box-shadow: 0 5px 15px #00ffb4;
+}
+.service-next:hover {
+  box-shadow: 0 5px 15px #00ffb4;
 }
 .service:hover p {
   color: #fff;
