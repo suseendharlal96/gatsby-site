@@ -9,7 +9,7 @@ const Navbar = ({ toggleSidebar }) => {
         <div className="nav-header">
           <Link to="/">
             <h3
-              style={{ fontFamily: "cursive", color: "darkcyan" }}
+              style={{ fontFamily: "cursive", color: "#00ffb4" }}
             >{`{{<Suseendhar Lal/>}}`}</h3>
           </Link>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>

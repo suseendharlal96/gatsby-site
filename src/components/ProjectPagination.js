@@ -45,7 +45,7 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
         >
           <button
             style={{ marginRight: "1%" }}
-            className={`btn  ${currentPage === index + 1 ? "active-page" : ""}`}
+            className={`${currentPage === index + 1 ? "btn-disabled" : "btn"}`}
           >
             {index + 1}
           </button>
