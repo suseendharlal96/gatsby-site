@@ -23,7 +23,7 @@ const contact = () => {
               />
               <input
                 type="email"
-                placeholder="email"
+                placeholder="email(optional)"
                 name="_replyto"
                 className="form-control"
               />
