@@ -308,7 +308,7 @@ Navbar
     padding: 0.5rem 0;
   }
   .nav-links a:hover {
-    color: #2c5dec;
+    color: var(--clr-primary-blue);
     box-shadow: 0px 2px var(--clr-primary-blue);
   }
   .nav-center {
@@ -321,7 +321,7 @@ Navbar
 @media screen and (min-width: 992px) {
   .navbar {
     background: transparent;
-    /* border: 0.5rem solid #2c5dec; */
+    /* border: 0.5rem solid var(--clr-primary-blue); */
     border-bottom: 3px solid var(--clr-primary-neon);
   }
 }
@@ -783,7 +783,7 @@ Projects
   font-size: 1.5rem;
 }
 .project-info h3:hover {
-  color: #2c5dec;
+  color: var(--clr-primary-blue);
   font-weight: 500;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
@@ -837,7 +837,7 @@ Projects
   transition: var(--transition);
 }
 .project-icon:hover {
-  color: #2c5dec;
+  color: var(--clr-primary-blue);
 }
 @media screen and (min-width: 576px) {
   .project-img {
