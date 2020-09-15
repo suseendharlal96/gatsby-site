@@ -1003,6 +1003,7 @@ Pages
   display: grid;
   place-items: center;
   background: var(--clr-grey);
+  border-bottom: 1px solid var(--clr-primary-neon);
   text-align: center;
 }
 .error-page h1 {
