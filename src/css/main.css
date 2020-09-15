@@ -797,8 +797,8 @@ Projects
 }
 .about-stack span {
   display: inline-block;
-  background: lightseagreen;
-  color: #fff;
+  background: var(--clr-primary-neon);
+  color: var(--clr-primary-black);
   margin-right: 0.5rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
