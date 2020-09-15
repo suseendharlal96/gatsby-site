@@ -9,7 +9,9 @@ const Error = () => {
       <SEO title="Page not found" />
       <main className="error-page">
         <div className="error-container">
-          <h1>{`<Oops..The page doesn't exist/>`}</h1>
+          <h1
+            style={{ color: "#2c5dec" }}
+          >{`<Oops..The page doesn't exist/>`}</h1>
           <Link to="/" className="btn">
             back home
           </Link>
