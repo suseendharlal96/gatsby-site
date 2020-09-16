@@ -2,7 +2,7 @@ const path = require("path")
 
 const slugify = require("./src/util/slugify")
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === "ContentfulProjects") {
     const slugTitle = slugify(node.title)
@@ -60,6 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
     const uniqueTags = [...new Set(tags)]
+    console.log(uniqueTags)
     uniqueTags.forEach(tag => {
       createPage({
         path: `/projects/${slugify(tag)}`,

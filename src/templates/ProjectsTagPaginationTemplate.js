@@ -41,10 +41,12 @@ export const tagPaginationQuery = graphql`
   query tagPaginationQuery($tag: String!, $limit: Int!, $skip: Int!) {
     projects: allContentfulProjects(
       filter: { tag: { stack: { in: [$tag] } } }
+      sort: { fields: title, order: ASC }
       limit: $limit
       skip: $skip
     ) {
       nodes {
+        title
         ...projectFragment
       }
       totalCount

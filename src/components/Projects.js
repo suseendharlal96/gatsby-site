@@ -1,15 +1,25 @@
 import React from "react"
+import { Link } from "gatsby"
+
 import Title from "./Title"
 import Project from "./Project"
-import { Link } from "gatsby"
-const Projects = ({ projects, title, showLink, skip }) => {
+import Tags from "../constants/tags"
+
+const Projects = ({ projects, title, showLink, hideTag, skip }) => {
   return (
     <section className="section projects">
       <Title title={title} />
+      {!hideTag && <Tags />}
       <div className="section-center projects-center">
         {projects.map((project, index) => {
           return (
-            <Project key={project.id} skip={skip} index={index} {...project} />
+            <Project
+              hideTag={hideTag}
+              key={project.id}
+              skip={skip}
+              index={index}
+              {...project}
+            />
           )
         })}
       </div>

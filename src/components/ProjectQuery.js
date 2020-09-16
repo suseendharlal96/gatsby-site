@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 export const projectQuery = graphql`
   fragment projectFragment on ContentfulProjects {
     id
-    title
     github
     live
     featured

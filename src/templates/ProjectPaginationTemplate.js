@@ -30,26 +30,30 @@ const ProjectPaginationTemplate = ({
   )
 }
 
-export const tagQuery = graphql`
+export const projectPaginationQuery = graphql`
   query pagination($limit: Int!, $skip: Int!) {
-    projects: allContentfulProjects(limit: $limit, skip: $skip) {
+    projects: allContentfulProjects(
+      sort: { fields: title, order: ASC }
+      limit: $limit
+      skip: $skip
+    ) {
       nodes {
         id
         title
         github
-        featured
-        desc {
-          childMarkdownRemark {
-            html
-          }
-        }
         live
-        tag {
-          stack
-        }
+        featured
         image {
           fluid {
             ...GatsbyContentfulFluid
+          }
+        }
+        tag {
+          stack
+        }
+        desc {
+          childMarkdownRemark {
+            html
           }
         }
       }

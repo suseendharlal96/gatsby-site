@@ -3,8 +3,10 @@ import { Link } from "gatsby"
 import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import slugify from "../util/slugify"
+
 const Project = ({
   title,
+  hideTag,
   github,
   live,
   skip,

@@ -808,10 +808,12 @@ Projects
 }
 
 .project-stack span {
-  display: inline-block;
-  background: var(--clr-primary-neon);
-  color: #000000;
+  /* background: var(--clr-primary-neon);
+  color: #000000; */
   /* box-shadow: 5px 5px #fff; */
+  background-color: #f04a26;
+  color: #fff;
+  display: inline-block;
   margin: 0.2rem 0.5rem 0 0;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
@@ -838,6 +840,28 @@ Projects
 }
 .project-icon:hover {
   color: var(--clr-primary-blue);
+}
+.tags-container {
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.tags-container span {
+  background-color: #f04a26;
+  color: #fff;
+  display: inline-block;
+  margin: 0.2rem 0.5rem 0.2rem 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+.tags-container span:hover {
+  background-color: var(--clr-primary-blue);
+  color: #fff;
+  transition: var(--transition);
 }
 @media screen and (min-width: 576px) {
   .project-img {

@@ -12,7 +12,8 @@ export default () => {
   const featuredProjects = useStaticQuery(graphql`
     {
       projects: allContentfulProjects(filter: { featured: { eq: true } }) {
-        nodes{
+        nodes {
+          title
           ...projectFragment
         }
       }
@@ -25,6 +26,7 @@ export default () => {
       <Services />
       <Jobs />
       <Projects
+        hideTag
         projects={featuredProjects.projects.nodes}
         title="featured projects"
         showLink

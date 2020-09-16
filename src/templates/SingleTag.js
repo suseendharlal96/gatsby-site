@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import ProjectPagination from "../components/ProjectPagination"
 
 const SingleTag = ({ data, pageContext: { tag } }) => {
+  console.log(data)
   return (
     <Layout>
       <SEO title={tag} />
@@ -48,12 +49,14 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
   )
 }
 
-export const tagQuery = graphql`
+export const singleTagQuery = graphql`
   query singleTag($tag: String!) {
     projects: allContentfulProjects(
       filter: { tag: { stack: { in: [$tag] } } }
+      sort: { fields: title, order: ASC }
     ) {
       nodes {
+        title
         ...projectFragment
       }
       totalCount

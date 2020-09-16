@@ -4,19 +4,23 @@ import SEO from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Projects from "../components/Projects"
 import ProjectPagination from "../components/ProjectPagination"
-// ...GatsbyImageSharpFluid
 
 const ProjectsPage = () => {
   const allProjects = useStaticQuery(graphql`
     {
-      projects: allContentfulProjects(limit: 3) {
+      projects: allContentfulProjects(
+        limit: 3
+        sort: { fields: title, order: ASC }
+      ) {
         nodes {
+          title
           ...projectFragment
         }
         totalCount
       }
     }
   `)
+  console.log(allProjects.projects.nodes)
   return (
     <Layout>
       <SEO title="Projects" />
