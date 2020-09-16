@@ -20,7 +20,6 @@ const ProjectsPage = () => {
       }
     }
   `)
-  console.log(allProjects.projects.nodes)
   return (
     <Layout>
       <SEO title="Projects" />

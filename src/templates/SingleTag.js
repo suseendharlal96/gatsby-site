@@ -6,7 +6,6 @@ import SEO from "../components/seo"
 import ProjectPagination from "../components/ProjectPagination"
 
 const SingleTag = ({ data, pageContext: { tag } }) => {
-  console.log(data)
   return (
     <Layout>
       <SEO title={tag} />

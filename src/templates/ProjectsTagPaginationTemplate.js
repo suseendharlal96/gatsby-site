@@ -9,10 +9,9 @@ const ProjectsTagPagination = ({
   data,
   pageContext: { currentPage, totalPages, skip, tag, tagCount },
 }) => {
-  console.log(data)
   return (
     <Layout>
-      <SEO />
+      <SEO title={tag} />
       <section className="projects-page">
         <ProjectPagination
           tag={tag}

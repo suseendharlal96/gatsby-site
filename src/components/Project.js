@@ -6,7 +6,6 @@ import slugify from "../util/slugify"
 
 const Project = ({
   title,
-  hideTag,
   github,
   live,
   skip,
@@ -35,9 +34,13 @@ const Project = ({
             .
           </span>
         )}
-        <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}>
-          <h3>{title || "default title"}</h3>
-        </Link>
+        {index >= 0 ? (
+          <Link to={`/projects/${slugify(title)}`}>
+            <h3>{title}</h3>
+          </Link>
+        ) : (
+          <h3>{title}</h3>
+        )}
         <div
           className="project-desc"
           dangerouslySetInnerHTML={{ __html: html }}

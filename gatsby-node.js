@@ -60,7 +60,6 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
     const uniqueTags = [...new Set(tags)]
-    console.log(uniqueTags)
     uniqueTags.forEach(tag => {
       createPage({
         path: `/projects/${slugify(tag)}`,

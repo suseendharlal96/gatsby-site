@@ -738,7 +738,6 @@ Projects
 */
 .projects {
   background: var(--clr-grey);
-  border-bottom: 3px solid var(--clr-primary-neon);
 }
 .project {
   display: grid;
@@ -990,6 +989,7 @@ Footer
   text-align: center;
   display: grid;
   place-items: center;
+  border-top: 3px solid var(--clr-primary-neon);
 }
 .footer h4 {
   margin-top: 0.5rem;
@@ -1050,7 +1050,6 @@ About Page
 */
 .about-page {
   padding: 7rem 0;
-  border-bottom: 3px solid var(--clr-primary-neon);
 }
 .about-img {
   margin-bottom: 2rem;
@@ -1109,7 +1108,6 @@ Contact Page
   display: grid;
   place-items: center;
   padding: 3rem 0;
-  border-bottom: 3px solid var(--clr-primary-neon);
 }
 .contact-form {
   background: var(--clr-grey);
