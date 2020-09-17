@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
+import Typist from "react-typist"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 
@@ -23,12 +24,14 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>Full Stack Developer</h1>
-            <h4>
-              Hello, I'm Suseendhar. I love creating high quality websites and
-              apps that use the latest and greatest tools out there to maximize
-              UI and UX quality.
-            </h4>
+            <Typist cursor={{ show: false }}>
+              <h1>Full Stack Developer</h1>
+              <h4>
+                Hello, I'm Suseendhar. I love creating high quality websites and
+                apps that use the latest and greatest tools out there to
+                maximize UI and UX quality.
+              </h4>
+            </Typist>
             <Link to="/contact" className="btn">
               contact me
             </Link>

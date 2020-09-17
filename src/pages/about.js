@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
+import Typist from "react-typist"
 import Title from "../components/Title"
 import Image from "gatsby-image"
 const About = () => {
@@ -38,13 +39,16 @@ const About = () => {
           />
           <article className="about-text">
             <Title title="About Me" />
-            <p>
-              I'm a full stack developer, I enjoy the process of making a web
-              site/app from start to finish. This gives me the ability to keep
-              an eye on the big picture the whole time I'm working on something.
-              In my spare time, I enjoy watching movies, listening songs,
-              surfing into social medias and spending time with friends.
-            </p>
+            <Typist avgTypingDelay={20} cursor={{ show: false }}>
+              <p>
+                I'm a full stack developer, I enjoy the process of making a web
+                site/app from start to finish. This gives me the ability to keep
+                an eye on the big picture the whole time I'm working on
+                something. In my spare time, I enjoy watching movies, listening
+                songs, surfing into social medias and spending time with
+                friends.
+              </p>
+            </Typist>
             <div className="about-stack">
               {stack.map(item => {
                 return <span key={item.id}>{item.title}</span>
