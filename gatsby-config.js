@@ -50,6 +50,13 @@ module.exports = {
         tawkId: "5f59ffd1f0e7167d000f11cc",
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#f04a26`,
+        showSpinner: false,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {

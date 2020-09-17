@@ -848,6 +848,7 @@ Projects
   margin-bottom: 20px;
 }
 .tags-container span {
+  animation: tag 3s;
   background-color: #f04a26;
   color: #fff;
   display: inline-block;
@@ -858,6 +859,16 @@ Projects
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
+
+@keyframes tag {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .tags-container span:hover {
   background-color: var(--clr-primary-blue);
   box-shadow: var(--neon-shadow);

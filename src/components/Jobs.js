@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 const Jobs = () => {
   const data = useStaticQuery(graphql`
     query {
-      jobs: allContentfulJobs {
+      jobs: allContentfulJobs(sort: { fields: mydate, order: ASC }) {
         nodes {
           id
           name
