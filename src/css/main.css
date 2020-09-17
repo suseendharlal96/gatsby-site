@@ -176,6 +176,7 @@ p {
   color: var(--clr-grey);
 }
 .btn:hover {
+  box-shadow: var(--neon-shadow);
   color: #fff;
   background: var(--clr-primary-blue);
 }
@@ -476,7 +477,7 @@ Hero
   display: none;
 }
 .hero-info h4 {
-  color: var(--clr-grey-5);
+  color: #61dafb;
 }
 .hero-icons {
   justify-items: flex-start;
@@ -659,8 +660,8 @@ Jobs
   line-height: 1;
 }
 .job-btn:hover {
-  color: var(--clr-primary-blue);
-  box-shadow: 0 2px var(--clr-primary-blue);
+  color: #f04a26;
+  box-shadow: 0 2px #f04a26;
 }
 .active-btn {
   color: var(--clr-primary-neon);
@@ -724,10 +725,10 @@ Jobs
     margin-bottom: 1rem;
   }
   .active-btn {
-    box-shadow: -2px 0 var(--clr-primary-blue);
+    box-shadow: -2px 0 var(--clr-primary-neon);
   }
   .job-btn:hover {
-    box-shadow: -2px 0 var(--clr-primary-blue);
+    box-shadow: -2px 0 #f04a26;
   }
 }
 
@@ -822,6 +823,7 @@ Projects
 
 .project-stack span:hover {
   background-color: var(--clr-primary-blue);
+  box-shadow: var(--neon-shadow);
   color: #fff;
   transition: var(--transition);
 }
@@ -858,6 +860,7 @@ Projects
 }
 .tags-container span:hover {
   background-color: var(--clr-primary-blue);
+  box-shadow: var(--neon-shadow);
   color: #fff;
   transition: var(--transition);
 }
