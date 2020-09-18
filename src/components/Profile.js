@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Typist from "react-typist"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
+import Resume from "../assets/resume.pdf"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -35,6 +36,15 @@ const Hero = () => {
             <Link to="/contact" className="btn">
               contact me
             </Link>
+            <a
+              style={{ marginLeft: "2%" }}
+              href="https://zety.com/mycv/suseendharlalls"
+              className="btn"
+              download
+              target="__blank"
+            >
+              View CV
+            </a>
             <SocialLinks />
           </div>
         </article>
