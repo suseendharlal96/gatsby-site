@@ -38,7 +38,7 @@ const Hero = () => {
             </Link>
             <a
               style={{ marginLeft: "2%" }}
-              href="https://zety.com/mycv/suseendharlalls"
+              href="https://zety.com/mycv/suseendhar"
               className="btn"
               download
               target="__blank"
