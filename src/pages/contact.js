@@ -2,12 +2,16 @@ import React from "react"
 import Typist from "react-typist"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { FiPhoneCall } from "react-icons/fi"
 
 const contact = () => {
   return (
     <Layout>
       <SEO title="Contact Me" />
       <section className="contact-page">
+        <a href="tel:+91-80125-43335" className="social-link">
+          <FiPhoneCall className="social-icon"></FiPhoneCall>
+        </a>
         <Typist avgTypingDelay={50} cursor={{ show: false }}>
           <h3 style={{ textAlign: "center", padding: "0px 10px 12px" }}>
             Whether you would like to hire me, further enquire about any of my
