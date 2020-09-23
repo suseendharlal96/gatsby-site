@@ -11,6 +11,7 @@ const tags = () => {
     "firebase",
     "materialise",
     "React",
+    "Redux",
     "GraphQL",
     "Nodejs",
     "MongoDB",
