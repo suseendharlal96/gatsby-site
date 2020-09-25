@@ -38,12 +38,12 @@ const Hero = () => {
             </Link>
             <a
               style={{ marginLeft: "2%" }}
-              href="https://zety.com/mycv/suseendhar"
+              href={Resume}
               className="btn"
               download
               target="__blank"
             >
-              View CV
+              Résumé
             </a>
             <SocialLinks />
           </div>
