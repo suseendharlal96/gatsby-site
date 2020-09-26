@@ -16,6 +16,7 @@ const tags = () => {
     "Nodejs",
     "MongoDB",
     "Vuejs",
+    "Vuex",
     "particlesJs",
     "Gatsby",
     "Contentful CMS",
