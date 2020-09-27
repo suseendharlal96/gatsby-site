@@ -6,43 +6,35 @@ import slugify from "../util/slugify"
 
 const tags = () => {
   const tags = [
-    "svelte",
-    "sapper",
-    "firebase",
-    "materialise",
     "React",
     "Redux",
     "GraphQL",
     "Nodejs",
     "MongoDB",
+    "Gatsby",
+    "Nextjs",
     "Vuejs",
     "Vuex",
+    "svelte",
+    "sapper",
+    "firebase",
+    "materialise",
     "particlesJs",
-    "Gatsby",
     "Contentful CMS",
     "Formspree",
     "Stripe",
     "chartJs",
     "Snipcart",
-    "Nextjs",
   ]
   return (
     <div className="tags-container">
-      {tags
-        .sort((a, b) =>
-          a.toLowerCase() < b.toLowerCase()
-            ? -1
-            : a.toLowerCase() > b.toLowerCase()
-            ? 1
-            : 0
+      {tags.map((item, index) => {
+        return (
+          <Link key={index} to={`/projects/${slugify(item)}`}>
+            <span>{item}</span>
+          </Link>
         )
-        .map((item, index) => {
-          return (
-            <Link key={index} to={`/projects/${slugify(item)}`}>
-              <span>{item}</span>
-            </Link>
-          )
-        })}
+      })}
     </div>
   )
 }
