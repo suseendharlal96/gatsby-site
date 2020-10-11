@@ -15,6 +15,7 @@ const tags = () => {
     "Nextjs",
     "Vuejs",
     "Vuex",
+    "Angular",
     "svelte",
     "sapper",
     "firebase",
