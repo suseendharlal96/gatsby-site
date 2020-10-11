@@ -248,7 +248,7 @@ Navbar
 */
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -321,7 +321,7 @@ Navbar
 
 @media screen and (min-width: 992px) {
   .navbar {
-    background: transparent;
+     background: var(--clr-grey);
     /* border: 0.5rem solid var(--clr-primary-blue); */
     border-bottom: 3px solid var(--clr-primary-neon);
   }
