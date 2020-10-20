@@ -207,7 +207,37 @@ p {
     width: 95vw;
   }
 }
-/* added during recording */
+
+.content-animate {
+  animation: full-animate 300ms ease-in 300ms;
+  animation-fill-mode: forwards;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+@keyframes full-animate {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateY(80%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50%);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(25%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .underline {
   width: 5rem;
   height: 0.25rem;
@@ -257,6 +287,7 @@ Navbar
   align-items: center;
   z-index: 200;
   background: var(--clr-grey);
+  animation: nav-load 300ms ease-in;
 }
 .nav-center {
   width: 90vw;
@@ -280,11 +311,21 @@ Navbar
   transition: var(--transition);
 }
 .toggle-btn:hover {
-  color: var(--clr-primary-black);
+  color: #f04a26;
 }
 .nav-links {
   display: none;
 }
+
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .toggle-btn {
     display: none;
@@ -321,7 +362,7 @@ Navbar
 
 @media screen and (min-width: 992px) {
   .navbar {
-     background: var(--clr-grey);
+    background: var(--clr-grey);
     /* border: 0.5rem solid var(--clr-primary-blue); */
     border-bottom: 3px solid var(--clr-primary-neon);
   }
@@ -743,6 +784,7 @@ Projects
 .project {
   display: grid;
   margin-bottom: 4rem;
+  padding: 0 5%;
 }
 .project-img {
   border-top-left-radius: var(--radius);
@@ -807,9 +849,6 @@ Projects
 }
 
 .project-stack span {
-  /* background: var(--clr-primary-neon);
-  color: #000000; */
-  /* box-shadow: 5px 5px #fff; */
   background-color: #f04a26;
   color: #fff;
   display: inline-block;
@@ -889,10 +928,10 @@ Projects
   .project {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+    padding: 0 5%;
   }
   .project-img {
     grid-column: 1 / span 8;
-    /* grid-column-end: 8; */
     grid-row: 1 / 1;
     height: 30rem;
     border-radius: var(--radius);
@@ -901,7 +940,6 @@ Projects
   .project-info {
     border-radius: var(--radius);
     box-shadow: var(--neon-shadow);
-
     z-index: 1;
     grid-column: 5 /12;
     grid-row: 1 / 1;

@@ -13,10 +13,10 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
         : "/projects"
       : tag
       ? `/projects/${slugify(tag)}/${currentPage - 1}`
-      : `/projects/page/${currentPage - 1}`
+      : `/projects/${currentPage - 1}`
   const nextPage = tag
     ? `/projects/${slugify(tag)}/${currentPage + 1}`
-    : `/projects/page/${currentPage + 1}`
+    : `/projects/${currentPage + 1}`
   return (
     <div className="btn-pagination">
       {isFirst ? (
@@ -40,7 +40,7 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
                 : "/projects"
               : tag
               ? `/projects/${slugify(tag)}/${index + 1}`
-              : `/projects/page/${index + 1}`
+              : `/projects/${index + 1}`
           }`}
         >
           <button

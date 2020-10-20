@@ -1,17 +1,17 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { graphql, useStaticQuery } from "gatsby"
-import Typist from "react-typist"
+import { graphql, useStaticQuery, Link } from "gatsby"
+// import Typist from "react-typist"
 import Title from "../components/Title"
 import Image from "gatsby-image"
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "susee-orig.png" }) {
+      file(relativePath: { eq: "projects-1.jpg" }) {
         childImageSharp {
-          fixed(height: 500, width: 355) {
-            ...GatsbyImageSharpFixed
+          fluid(maxHeight: 650, maxWidth: 650) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -26,7 +26,8 @@ const About = () => {
     { id: "6", title: "Angular" },
     { id: "7", title: "Vue" },
     { id: "8", title: "MongoDb" },
-    { id: "9", title: "GraphQL" },
+    { id: "9", title: "GatsbyJS" },
+    { id: "10", title: "GraphQL" },
   ]
   return (
     <Layout>
@@ -34,21 +35,25 @@ const About = () => {
       <section className="about-page">
         <div className="section-center about-center">
           <Image
-            fixed={data.file.childImageSharp.fixed}
+            fluid={data.file.childImageSharp.fluid}
             className="about-img"
           />
           <article className="about-text">
             <Title title="About Me" />
-            <Typist avgTypingDelay={20} cursor={{ show: false }}>
-              <p>
-                I'm a full stack developer, I enjoy the process of making a web
-                site/app from start to finish. This gives me the ability to keep
-                an eye on the big picture the whole time I'm working on
-                something. In my spare time, I enjoy watching movies, listening
-                songs, surfing into social medias and spending time with
-                friends.
-              </p>
-            </Typist>
+            <p>
+              I'm a Full~Stack developer and I take responsibility of developing
+              responsive sites using HTML, CSS and JS along with latest
+              frameworks and libraries like Reactjs, redux, angular7,Nodejs,
+              mongodb. I've also single handedly developed websites using
+              React(also Angular & Vue), Redux, Nodejs, Mongodb along with
+              GraphQL from the scratch which includes all the authentication and
+              core stuffs for a website.
+            </p>
+            <p>
+              Strong knowledge on: HTML, CSS, JS, Reactjs, Redux, Angular7,
+              Nodejs, Mongodb, GatsbyJS(React static site generator),
+              GraphQL(Apollo GraphQL), Vuejs & Chartjs.
+            </p>
             <div className="about-stack">
               {stack.map(item => {
                 return <span key={item.id}>{item.title}</span>

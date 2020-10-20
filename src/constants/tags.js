@@ -29,6 +29,9 @@ const tags = () => {
   ]
   return (
     <div className="tags-container">
+      <h4 style={{ color: "#00ffb4" }}>
+        Click on a tag to view projects based on tag😀
+      </h4>
       {tags.map((item, index) => {
         return (
           <Link key={index} to={`/projects/${slugify(item)}`}>

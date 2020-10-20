@@ -77,7 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
         return
       } else {
         createPage({
-          path: `/projects/page/${currentPage}`,
+          path: `/projects/${currentPage}`,
           component: template.projectPagination,
           context: {
             limit: projectsPerPage,

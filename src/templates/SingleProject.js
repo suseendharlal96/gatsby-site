@@ -21,8 +21,10 @@ const SingleProject = ({ data: { project }, pageContext: { title } }) => {
       <Title title={title} />
       <Tags />
       <Project key={project.id} {...project} />
-      <CommentCount config={disqusConfig} placeholder={"..."} />
-      <Disqus config={disqusConfig} />
+      <div style={{ padding: "0% 5%" }}>
+        <CommentCount config={disqusConfig} placeholder={"..."} />
+        <Disqus config={disqusConfig} />
+      </div>
     </Layout>
   )
 }
