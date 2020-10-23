@@ -23,43 +23,21 @@ const data = [
   },
 ]
 
-class MyLink extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isActive: false,
-    }
-  }
-  componentDidMount() {
-    if (
-      window.location.pathname === this.props.to ||
-      window.location.pathname.includes(this.props.to + "/")
-    ) {
-      this.setState({
-        isActive: true,
-      })
-    }
-  }
-  render() {
-    return (
-      <ul
-        className={`page-links ${
-          this.props.styleClass ? this.props.styleClass : ""
-        }`}
-      >
-        {data.map(link => {
-          return (
-            <li
-              onClick={this.props.toggle}
-              className={this.state.isActive ? "active" : ""}
-              key={link.id}
-            >
-              <Link to={link.url}>{link.text}</Link>
-            </li>
-          )
-        })}
-      </ul>
-    )
-  }
+const MyLink = ({ toggle, styleClass }) => {
+  return (
+    <ul className={`page-links ${styleClass ? styleClass : ""}`}>
+      {data.map(link => {
+        return (
+          <li
+            onClick={toggle}
+            // className={this.state.isActive ? "active" : ""}
+            key={link.id}
+          >
+            <Link to={link.url}>{link.text}</Link>
+          </li>
+        )
+      })}
+    </ul>
+  )
 }
 export default MyLink

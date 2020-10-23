@@ -581,6 +581,7 @@ Services
   text-align: center;
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  min-height: 300px;
 }
 .service-icon {
   font-size: 2rem;
@@ -603,27 +604,35 @@ Services
 }
 .service-react {
   background: #61dafb;
+  cursor: pointer;
 }
 .service-angular {
   background: var(--clr-red-dark);
+  cursor: pointer;
 }
 .service-vue {
   background: var(--clr-green-dark);
+  cursor: pointer;
 }
 .service-node {
   background: darkgreen;
+  cursor: pointer;
 }
 .service-mongo {
   background: green;
+  cursor: pointer;
 }
 .service-gatsby {
   background: purple;
+  cursor: pointer;
 }
 .service-apollo {
   background: gray;
+  cursor: pointer;
 }
 .service-next {
   background: darkturquoise;
+  cursor: pointer;
 }
 .service-react:hover {
   box-shadow: 0 5px 15px var(--clr-primary-neon);

@@ -1,5 +1,5 @@
 import React from "react"
-
+import { AiOutlineTag } from "react-icons/ai"
 import { Link } from "gatsby"
 
 import slugify from "../util/slugify"
@@ -30,7 +30,7 @@ const tags = () => {
   return (
     <div className="tags-container">
       <h4 style={{ color: "#00ffb4" }}>
-        Click on a tag to view projects based on tag😀
+        Click on a tag to view projects based on tag<AiOutlineTag />
       </h4>
       {tags.map((item, index) => {
         return (
