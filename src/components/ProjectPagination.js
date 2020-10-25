@@ -20,12 +20,19 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
   return (
     <div className="btn-pagination">
       {isFirst ? (
-        <button style={{ marginRight: "1%" }} className="btn-disabled" disabled>
+        <button
+          style={{ marginRight: "10px", marginBottom: "10px" }}
+          className="btn-disabled"
+          disabled
+        >
           Prev
         </button>
       ) : (
         <Link to={prevPage}>
-          <button style={{ marginRight: "1%" }} className="btn">
+          <button
+            style={{ marginRight: "10px", marginBottom: "10px" }}
+            className="btn"
+          >
             Prev
           </button>
         </Link>
@@ -44,7 +51,7 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
           }`}
         >
           <button
-            style={{ marginRight: "1%" }}
+            style={{ marginRight: "10px", marginBottom: "10px" }}
             className={`${currentPage === index + 1 ? "btn-disabled" : "btn"}`}
           >
             {index + 1}
@@ -52,12 +59,19 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
         </Link>
       ))}
       {isLast ? (
-        <button style={{ marginRight: "1%" }} className="btn-disabled" disabled>
+        <button
+          style={{ marginRight: "10px", marginBottom: "10px" }}
+          className="btn-disabled"
+          disabled
+        >
           Next
         </button>
       ) : (
         <Link to={nextPage}>
-          <button style={{ marginRight: "1%" }} className="btn">
+          <button
+            style={{ marginRight: "10px", marginBottom: "10px" }}
+            className="btn"
+          >
             Next
           </button>
         </Link>

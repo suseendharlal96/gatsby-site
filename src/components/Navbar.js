@@ -3,6 +3,16 @@ import { Link } from "gatsby"
 import { FaAlignRight } from "react-icons/fa"
 import PageLinks from "./links"
 const Navbar = ({ toggleSidebar }) => {
+  // const [header, setHeader] = useState(false)
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     window.scrollY > 100 ? setHeader(true) : setHeader(false)
+  //   })
+  //   return () => {
+  //     const removeFunction = () => {}
+  //     window.removeEventListener("scroll", removeFunction)
+  //   }
+  // }, [])
   return (
     <nav className="navbar">
       <div className="nav-center">

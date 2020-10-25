@@ -753,7 +753,11 @@ Jobs
 }
 .btn-pagination {
   flex-direction: row;
-  padding-top: 2%;
+  padding: 2% 1% 0 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 992px) {
   .jobs-center {
@@ -767,9 +771,7 @@ Jobs
     justify-content: flex-start;
   }
   .btn-pagination {
-    flex-direction: row;
-    margin-left: 36.5%;
-    padding-top: 2%;
+    padding: 2% 1% 0 1%;
   }
   .job-btn {
     margin-bottom: 1rem;
