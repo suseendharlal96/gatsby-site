@@ -364,6 +364,9 @@ Navbar
   .navbar {
     background: var(--clr-grey);
     /* border: 0.5rem solid var(--clr-primary-blue); */
+    transition: all 0.2s;
+  }
+  .border {
     border-bottom: 3px solid var(--clr-primary-neon);
   }
 }
