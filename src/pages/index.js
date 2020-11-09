@@ -6,7 +6,6 @@ import Profile from "../components/Profile"
 import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
-// import Blogs from "../components/Blogs"
 
 export default () => {
   const featuredProjects = useStaticQuery(graphql`

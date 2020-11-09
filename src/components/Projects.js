@@ -20,20 +20,13 @@ const Projects = ({
   return (
     <section className="section projects">
       <Title title={title} />
-      {(!tag && currentPage && (
+      {(!tag && currentPage) || (tag && tagLength > 3) ? (
         <ProjectPagination
           currentPage={currentPage}
           totalPages={totalPages}
           tag={tag}
         />
-      )) ||
-        (tag && tagLength > 3 && (
-          <ProjectPagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            tag={tag}
-          />
-        ))}
+      ) : null}
       {!hideTag && <Tags />}
       <div className="section-center projects-center">
         {projects.map((project, index) => {
@@ -48,20 +41,13 @@ const Projects = ({
           )
         })}
       </div>
-      {(!tag && currentPage && (
+      {(!tag && currentPage) || (tag && tagLength > 3) ? (
         <ProjectPagination
           currentPage={currentPage}
           totalPages={totalPages}
           tag={tag}
         />
-      )) ||
-        (tag && tagLength > 3 && (
-          <ProjectPagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            tag={tag}
-          />
-        ))}
+      ) : null}
       {showLink && (
         <Link to="/projects" className="btn center-btn">
           All Projects

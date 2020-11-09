@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+
 const data = [
   {
     id: 1,
@@ -8,7 +9,7 @@ const data = [
   },
   {
     id: 2,
-    text: "about",
+    text: "about me",
     url: "/about",
   },
   {
@@ -30,7 +31,6 @@ const MyLink = ({ toggle, styleClass }) => {
         return (
           <li
             onClick={toggle}
-            // className={this.state.isActive ? "active" : ""}
             key={link.id}
           >
             <Link to={link.url}>{link.text}</Link>
