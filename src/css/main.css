@@ -189,7 +189,7 @@ p {
 }
 /* section */
 .section {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .section-jobs {
@@ -247,7 +247,7 @@ p {
   margin-right: auto;
 }
 .section-title {
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
   text-align: center;
 }
 .bg-grey {
@@ -363,12 +363,12 @@ Navbar
 @media screen and (min-width: 992px) {
   .navbar {
     background: var(--clr-grey);
-    /* border: 0.5rem solid var(--clr-primary-blue); */
+    border-bottom: 3px solid var(--clr-primary-neon);
     transition: all 0.2s;
   }
-  .border {
+  /* .border {
     border-bottom: 3px solid var(--clr-primary-neon);
-  }
+  } */
 }
 /*
 =============== 
@@ -756,7 +756,7 @@ Jobs
 }
 .btn-pagination {
   flex-direction: row;
-  padding: 2% 1% 0 1%;
+  padding-bottom: 1%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -774,7 +774,7 @@ Jobs
     justify-content: flex-start;
   }
   .btn-pagination {
-    padding: 2% 1% 0 1%;
+    padding-bottom: 1%;
   }
   .job-btn {
     margin-bottom: 1rem;

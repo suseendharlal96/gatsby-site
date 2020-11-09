@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, useStaticQuery } from "gatsby"
 import Projects from "../components/Projects"
-import ProjectPagination from "../components/ProjectPagination"
 
 const ProjectsPage = () => {
   const allProjects = useStaticQuery(graphql`
@@ -24,17 +23,12 @@ const ProjectsPage = () => {
     <Layout>
       <SEO title="Projects" />
       <section className="projects-page">
-        <ProjectPagination
+        <Projects
+          projects={allProjects.projects.nodes}
+          title="all projects"
           currentPage={1}
           totalPages={Math.ceil(allProjects.projects.totalCount / 3)}
         />
-        <Projects projects={allProjects.projects.nodes} title="all projects" />
-        <div style={{ paddingBottom: "2%" }}>
-          <ProjectPagination
-            currentPage={1}
-            totalPages={Math.ceil(allProjects.projects.totalCount / 3)}
-          />
-        </div>
       </section>
     </Layout>
   )

@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Projects from "../components/Projects"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ProjectPagination from "../components/ProjectPagination"
 
 const ProjectsTagPagination = ({
   data,
@@ -13,24 +12,16 @@ const ProjectsTagPagination = ({
     <Layout>
       <SEO title={tag} />
       <section className="projects-page">
-        <ProjectPagination
-          tag={tag}
-          currentPage={currentPage}
-          totalPages={totalPages}
-        />
         <Projects
           title={`${tagCount} projects tagged with ${tag}`}
           skip={skip}
           projects={data.projects.nodes}
           showLink
+          tag={tag}
+          currentPage={currentPage}
+          tagLength={data.projects.totalCount}
+          totalPages={totalPages}
         />
-        <div style={{ paddingBottom: "2%" }}>
-          <ProjectPagination
-            tag={tag}
-            currentPage={currentPage}
-            totalPages={totalPages}
-          />
-        </div>
       </section>
     </Layout>
   )
