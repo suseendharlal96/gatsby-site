@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 import Resume from "../assets/resume.pdf"
 
-const Hero = () => {
+const Profile = ({ scrollToId }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "susee-bw.png" }) {
@@ -53,9 +53,18 @@ const Hero = () => {
           style={{ left: "45px" }}
           className="hero-img"
         />
+        <button
+          className="content-animate nav-btn"
+          onClick={() => scrollToId("service")}
+        >
+          <div style={{ transform: "rotate(180deg)" }}>
+            <span className="line-1"></span>
+            <span className="line-2"></span>
+          </div>
+        </button>
       </div>
     </header>
   )
 }
 
-export default Hero
+export default Profile

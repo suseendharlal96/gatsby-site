@@ -1,9 +1,9 @@
 import React from "react"
 
-const Title = ({ title }) => {
+const Title = ({ title, id }) => {
   return (
     <div className="section-title">
-      <h2>{title || "Service"}</h2>
+      <h2 id={id}>{title || "Techs"}</h2>
       <div className="underline"></div>
     </div>
   )

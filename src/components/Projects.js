@@ -18,7 +18,7 @@ const Projects = ({
   tagLength,
 }) => {
   return (
-    <section className="section projects">
+    <section id="projects" className="section projects">
       <Title title={title} />
       {(!tag && currentPage) || (tag && tagLength > 3) ? (
         <ProjectPagination

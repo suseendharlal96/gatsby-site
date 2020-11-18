@@ -2,9 +2,8 @@ import React, { useState } from "react"
 import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
 
-const Jobs = () => {
+const Jobs = ({ scrollToId }) => {
   const data = useStaticQuery(graphql`
     query {
       jobs: allContentfulJobs(sort: { fields: mydate, order: ASC }) {
@@ -21,7 +20,7 @@ const Jobs = () => {
   const [value, setValue] = useState(0)
   const { name, designation, mydate, description } = data.jobs.nodes[value]
   return (
-    <section className="section-jobs">
+    <section id="jobs" className="section-jobs">
       <Title title="Experience" />
       <div className="jobs-center">
         <div className="btn-container">
@@ -45,9 +44,18 @@ const Jobs = () => {
           </div>
         </article>
       </div>
-      <Link to="/about" className="btn center-btn">
+      <button
+        className="content-animate job-scroll"
+        onClick={() => scrollToId("projects")}
+      >
+        <div style={{ transform: "rotate(180deg)" }}>
+          <span className="line-1"></span>
+          <span className="line-2"></span>
+        </div>
+      </button>
+      {/* <Link to="/about" className="btn center-btn">
         more info
-      </Link>
+      </Link> */}
     </section>
   )
 }

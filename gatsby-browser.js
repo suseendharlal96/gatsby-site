@@ -1,4 +1,6 @@
 import "./src/css/main.css"
+// import "bootstrap/dist/css/bootstrap.min.css"
+// import "https:code.jquery.com/jquery-3.4.1min.js"
 // import 'bootstrap/dist/css/bootstrap.min.css';
 /**
  * Implement Gatsby's Browser APIs in this file.

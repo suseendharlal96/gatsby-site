@@ -2,6 +2,15 @@ const path = require("path")
 
 const slugify = require("./src/util/slugify")
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  const { setWebpackConfig } = actions
+  setWebpackConfig({
+    externals: {
+      jquery: "jQuery", // important: 'Q' capitalized
+    },
+  })
+}
+
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === "ContentfulProjects") {
