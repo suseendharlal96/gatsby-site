@@ -27,8 +27,6 @@ const Services = ({ scrollToId }) => {
             <article className={`service service-${css}`}>
               {icon}
               <h4>{title}</h4>
-              <div className="underline"></div>
-              <p>{text}</p>
             </article>
           </Link>
         ))}
