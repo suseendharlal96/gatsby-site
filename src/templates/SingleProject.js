@@ -20,8 +20,10 @@ const SingleProject = ({ data: { project }, pageContext: { title } }) => {
   const [backButton, setBackButton] = useState(false)
   useEffect(() => {
     const getLocation = () => {
-      if (window.location.href.search(`${slugify(title)}`) !== -1) {
-        console.log("back button", window.location.href)
+      if (
+        typeof window !== undefined &&
+        window.location.href.search(`${slugify(title)}`) !== -1
+      ) {
         setBackButton(true)
       } else {
         setBackButton(false)
@@ -31,7 +33,7 @@ const SingleProject = ({ data: { project }, pageContext: { title } }) => {
     return () => {
       getLocation()
     }
-  }, [window.location.href])
+  }, [typeof window !== undefined && window.location.href])
   return (
     <Layout>
       <SEO title={title} />
