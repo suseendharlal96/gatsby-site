@@ -895,7 +895,7 @@ Projects
 .project-img {
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
-  height: 19rem;
+  height: 1rem;
   z-index: 1;
 }
 .project-img::after {

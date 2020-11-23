@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import { FaGithubSquare, FaShareSquare, FaRegCommentDots } from "react-icons/fa"
 import slugify from "../util/slugify"
 
 const Project = ({
@@ -23,23 +23,30 @@ const Project = ({
       {/* </Link> */}
       <div className="project-info">
         {index >= 0 && (
-          <span className="project-number">
-            {skip
-              ? skip + index + 1 <= 9
-                ? "0" + (skip + index + 1)
-                : skip + index + 1
-              : index + 1 <= 9
-              ? "0" + (index + 1)
-              : index + 1}
-            .
-          </span>
-        )}
-        {index >= 0 ? (
-          <Link to={`/projects/${slugify(title)}`}>
-            <h3>{title}</h3>
-          </Link>
-        ) : (
-          <h3>{title}</h3>
+          <>
+            <span className="project-number">
+              {skip
+                ? skip + index + 1 <= 9
+                  ? "0" + (skip + index + 1)
+                  : skip + index + 1
+                : index + 1 <= 9
+                ? "0" + (index + 1)
+                : index + 1}
+              .
+            </span>
+            <span style={{ marginLeft: "5px" }} className="project-number">
+              {index >= 0 ? (
+                <Link
+                  style={{ color: "var(--primary-neon)" }}
+                  to={`/projects/${slugify(title)}`}
+                >
+                  {title}
+                </Link>
+              ) : (
+                <h3>{title}</h3>
+              )}
+            </span>
+          </>
         )}
         <div
           className="project-desc"
@@ -56,11 +63,17 @@ const Project = ({
         </div>
         <div className="project-links">
           <a rel="noreferrer noopener" target="_blank" href={github}>
-            <FaGithubSquare className="project-icon" />
+            <FaGithubSquare title="github repo" className="project-icon" />
           </a>
           <a rel="noreferrer noopener" target="_blank" href={live}>
-            <FaShareSquare className="project-icon" />
+            <FaShareSquare title="live demo" className="project-icon" />
           </a>
+          <Link style={{ float: "right" }} to={`/projects/${slugify(title)}`}>
+            <FaRegCommentDots
+              title="like,share,comment"
+              className="project-icon"
+            />
+          </Link>
         </div>
       </div>
     </article>
