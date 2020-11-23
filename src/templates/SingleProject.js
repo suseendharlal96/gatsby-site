@@ -33,7 +33,7 @@ const SingleProject = ({ data: { project }, pageContext: { title } }) => {
     return () => {
       getLocation()
     }
-  }, [typeof window !== undefined && window.location.href])
+  }, [backButton])
   return (
     <Layout>
       <SEO title={title} />
