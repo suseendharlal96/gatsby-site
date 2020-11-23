@@ -24,9 +24,9 @@ const Profile = ({ scrollToId }) => {
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
-            <div className="underline"></div>
             <Typist cursor={{ show: false }}>
               <h1>Full Stack Developer</h1>
+              <div className="underline"></div>
               <h4>
                 Hello, I'm Suseendhar. I love creating high quality websites and
                 apps that use the latest and greatest tools out there to
