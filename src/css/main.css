@@ -828,13 +828,39 @@ Jobs
 .job-icon {
   color: var(--clr-primary-blue);
 }
-.btn-pagination {
+.pagination-container {
   flex-direction: row;
   padding-bottom: 1%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.pagination-btn {
+  border-radius: 50%;
+  padding: 0.5rem;
+  background: var(--clr-primary-neon);
+  cursor: pointer;
+  color: #000000;
+  outline: none;
+  height: 35px;
+  width: 35px;
+}
+.pagination-btn:hover {
+  background: var(--clr-primary-blue);
+  color: #ffffff;
+}
+.pagination-btn:disabled {
+  background: grey;
+  outline: none;
+  cursor: no-drop;
+  color: #000000;
+}
+.pagination-btn.disabled {
+  background: grey;
+  outline: none;
+  cursor: no-drop;
+  color: #000000;
 }
 @media screen and (max-width: 768px) {
   .scroll-btn {
