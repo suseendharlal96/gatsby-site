@@ -843,8 +843,11 @@ Jobs
   cursor: pointer;
   color: #000000;
   outline: none;
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
+  font-weight: 700;
+  font-size: large;
+  transition: var(--transition);
 }
 .pagination-btn:hover {
   background: var(--clr-primary-blue);
