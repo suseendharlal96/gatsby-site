@@ -20,7 +20,7 @@ const Jobs = ({ scrollToId }) => {
   const [value, setValue] = useState(0)
   const { name, designation, mydate, description } = data.jobs.nodes[value]
   return (
-    <section id="jobs" className="section-jobs">
+    <section id="jobs" className="content-animate section-jobs">
       <Title title="Experience" />
       <div className="jobs-center">
         <div className="btn-container">

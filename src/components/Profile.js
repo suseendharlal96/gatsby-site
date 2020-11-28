@@ -20,7 +20,7 @@ const Profile = ({ scrollToId }) => {
   `)
 
   return (
-    <header className="hero">
+    <header className="content-animate hero">
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>

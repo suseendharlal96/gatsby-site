@@ -28,7 +28,7 @@ const Projects = ({
         />
       ) : null}
       {!hideTag && <Tags />}
-      <div className="section-center projects-center">
+      <div className="content-animate section-center projects-center">
         {projects.map((project, index) => {
           return (
             <Project

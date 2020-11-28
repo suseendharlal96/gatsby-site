@@ -8,7 +8,7 @@ const contact = () => {
   return (
     <Layout>
       <SEO title="Contact Me" />
-      <section className="contact-page">
+      <section className="content-animate contact-page">
         <a href="tel:+91-80125-43335" className="social-link">
           <FiPhoneCall className="social-icon"></FiPhoneCall>
         </a>

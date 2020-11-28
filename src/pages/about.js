@@ -32,7 +32,7 @@ const About = () => {
   return (
     <Layout>
       <SEO title="About Me" description="about suseendhar" />
-      <section className="about-page">
+      <section className="content-animate about-page">
         <div className="section-center about-center">
           <Image
             fluid={data.file.childImageSharp.fluid}
@@ -44,7 +44,7 @@ const About = () => {
               I'm a Full~Stack developer and I take responsibility of developing
               responsive sites using HTML, CSS and JS along with latest
               frameworks and libraries like Reactjs, redux, angular7,Nodejs,
-              mongodb. I've also single handedly developed websites using
+              mongodb. As a good team player, I've developed websites using
               React(also Angular & Vue), Redux, Nodejs, Mongodb along with
               GraphQL from the scratch which includes all the authentication and
               core stuffs for a website.

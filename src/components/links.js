@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 const data = [
@@ -25,15 +25,29 @@ const data = [
 ]
 
 const MyLink = ({ toggle, styleClass }) => {
+  const [active, setActive] = useState("")
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      console.log(window.location.pathname)
+      setActive(window.location.pathname)
+    }
+    return () => window !== undefined && window.location.pathname
+  }, [])
   return (
-    <ul className={`page-links ${styleClass ? styleClass : ""}`}>
+    <ul className={styleClass ? styleClass : ""}>
       {data.map(link => {
         return (
-          <li
-            onClick={toggle}
-            key={link.id}
-          >
-            <Link to={link.url}>{link.text}</Link>
+          <li onClick={toggle} key={link.id}>
+            <Link
+              className={
+                active === link.url || active.search(link.url + "/") !== -1
+                  ? "active-link"
+                  : ""
+              }
+              to={link.url}
+            >
+              {link.text}
+            </Link>
           </li>
         )
       })}
