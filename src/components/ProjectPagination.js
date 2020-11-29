@@ -21,38 +21,20 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
     <div className="pagination-container">
       {isFirst ? (
         <>
-          <button
-            style={{ marginRight: "10px", marginBottom: "10px" }}
-            className="pagination-btn"
-            disabled
-          >
+          <button className="pagination-btn" disabled>
             {"I<<"}
           </button>
-          <button
-            style={{ marginRight: "10px", marginBottom: "10px" }}
-            className="pagination-btn"
-            disabled
-          >
+          <button className="pagination-btn" disabled>
             {"<"}
           </button>
         </>
       ) : (
         <>
           <Link to={tag ? `/projects/${slugify(tag)}` : "/projects"}>
-            <button
-              style={{ marginRight: "10px", marginBottom: "10px" }}
-              className="pagination-btn"
-            >
-              {"I<<"}
-            </button>
+            <button className="pagination-btn">{"I<<"}</button>
           </Link>
           <Link to={prevPage}>
-            <button
-              style={{ marginRight: "10px", marginBottom: "10px" }}
-              className="pagination-btn"
-            >
-              {"<"}
-            </button>
+            <button className="pagination-btn">{"<"}</button>
           </Link>
         </>
       )}
@@ -70,7 +52,6 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
           }`}
         >
           <button
-            style={{ marginRight: "10px", marginBottom: "10px" }}
             className={`${
               currentPage === index + 1
                 ? "pagination-btn disabled"
@@ -83,30 +64,17 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
       ))}
       {isLast ? (
         <>
-          <button
-            style={{ marginRight: "10px", marginBottom: "10px" }}
-            className="pagination-btn"
-            disabled
-          >
+          <button className="pagination-btn" disabled>
             {">"}
           </button>
-          <button
-            style={{ marginRight: "10px", marginBottom: "10px" }}
-            className="pagination-btn"
-            disabled
-          >
+          <button className="pagination-btn" disabled>
             {">>I"}
           </button>
         </>
       ) : (
         <>
           <Link to={nextPage}>
-            <button
-              style={{ marginRight: "10px", marginBottom: "10px" }}
-              className="pagination-btn"
-            >
-              {">"}
-            </button>
+            <button className="pagination-btn">{">"}</button>
           </Link>
           <Link
             to={
@@ -115,12 +83,7 @@ const ProjectPagination = ({ currentPage, totalPages, tag }) => {
                 : `/projects/${totalPages}`
             }
           >
-            <button
-              style={{ marginRight: "10px", marginBottom: "10px" }}
-              className="pagination-btn"
-            >
-              {">>I"}
-            </button>
+            <button className="pagination-btn">{">>I"}</button>
           </Link>
         </>
       )}

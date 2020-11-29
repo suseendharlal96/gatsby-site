@@ -838,6 +838,7 @@ Jobs
   background: var(--clr-primary-neon);
   cursor: pointer;
   color: #000000;
+  margin-right: 5px;
   outline: none;
   height: 40px;
   width: 40px;
