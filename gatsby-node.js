@@ -78,7 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     // pagination in projects page
-    const projectsPerPage = 3
+    const projectsPerPage = 4
     const totalPages = Math.ceil(projects.length / projectsPerPage)
     Array.from({ length: totalPages }).map((_, index) => {
       const currentPage = index + 1
@@ -104,7 +104,7 @@ exports.createPages = async ({ graphql, actions }) => {
       pro.tag.stack.forEach(t => {
         allTags[t] = (allTags[t] || 0) + 1
         if (allTags[t] > 3) {
-          const tagsPerPage = 3
+          const tagsPerPage = 4
           const totalPages = Math.ceil(allTags[t] / tagsPerPage)
           Array.from({ length: totalPages }).map((_, index) => {
             const currentPage = index + 1

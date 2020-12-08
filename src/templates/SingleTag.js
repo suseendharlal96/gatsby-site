@@ -9,15 +9,15 @@ const SingleTag = ({ data, pageContext: { tag } }) => {
     <Layout>
       <SEO title={tag} />
       <section className="projects-page">
-        {data.projects.nodes.length > 3 ? (
+        {data.projects.nodes.length > 4 ? (
           <Projects
             title={`${data.projects.nodes.length} projects tagged with ${tag}`}
-            projects={data.projects.nodes.slice(0, 3)}
+            projects={data.projects.nodes.slice(0, 4)}
             showLink
             tag={tag}
             tagLength={data.projects.nodes.length}
             currentPage={1}
-            totalPages={Math.ceil(data.projects.totalCount / 3)}
+            totalPages={Math.ceil(data.projects.totalCount / 4)}
           />
         ) : (
           <Projects

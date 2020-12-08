@@ -8,7 +8,7 @@ const ProjectsPage = () => {
   const allProjects = useStaticQuery(graphql`
     {
       projects: allContentfulProjects(
-        limit: 3
+        limit: 4
         sort: { fields: title, order: ASC }
       ) {
         nodes {
@@ -27,7 +27,7 @@ const ProjectsPage = () => {
           projects={allProjects.projects.nodes}
           title="all projects"
           currentPage={1}
-          totalPages={Math.ceil(allProjects.projects.totalCount / 3)}
+          totalPages={Math.ceil(allProjects.projects.totalCount / 4)}
         />
       </section>
     </Layout>
