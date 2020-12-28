@@ -815,7 +815,7 @@ Jobs
   align-items: center;
   margin-bottom: 1.25rem;
 }
-.job-desc p {
+.job-desc li {
   margin-bottom: 0;
   color: #fff;
 }

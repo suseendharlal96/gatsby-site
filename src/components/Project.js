@@ -16,6 +16,7 @@ const Project = ({
   tag: { stack },
   index,
 }) => {
+  console.log(html)
   return (
     <article className="project">
       {/* <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}> */}

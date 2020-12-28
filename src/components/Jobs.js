@@ -13,12 +13,25 @@ const Jobs = ({ scrollToId }) => {
           mydate
           designation
           description
+          desc {
+            childMarkdownRemark {
+              html
+            }
+          }
         }
       }
     }
   `)
   const [value, setValue] = useState(0)
-  const { name, designation, mydate, description } = data.jobs.nodes[value]
+  const {
+    name,
+    designation,
+    mydate,
+    desc: {
+      childMarkdownRemark: { html },
+    },
+  } = data.jobs.nodes[value]
+  console.log(html)
   return (
     <section id="jobs" className="content-animate section-jobs">
       <Title title="Experience" />
@@ -38,10 +51,10 @@ const Jobs = ({ scrollToId }) => {
           <h3>{designation}</h3>
           <h4>{name}</h4>
           <h3 className="job-date">{mydate}</h3>
-          <div className="job-desc">
-            <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
-            <p>{description}</p>
-          </div>
+          <div
+            className="job-desc"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </article>
       </div>
       <button
