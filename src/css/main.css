@@ -1323,7 +1323,14 @@ Contact Page
 .form-control:focus {
   outline-color: var(--clr-primary-neon);
 }
+input[type="text"] {
+  color: #f04a26;
+}
+input[type="email"] {
+  color: #f04a26;
+}
 textarea {
+  color: #f04a26;
   resize: vertical;
 }
 .form-control::placeholder {
