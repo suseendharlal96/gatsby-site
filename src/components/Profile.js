@@ -3,8 +3,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import Typist from "react-typist"
 import { graphql, useStaticQuery } from "gatsby"
-import SocialLinks from "../constants/socialLinks"
-import Resume from "../assets/resume.pdf"
+import Resume from "../assets/suseendhar_webDev.pdf"
 
 const Profile = ({ scrollToId }) => {
   const data = useStaticQuery(graphql`
@@ -45,7 +44,6 @@ const Profile = ({ scrollToId }) => {
             >
               Résumé
             </a>
-            <SocialLinks />
           </div>
         </article>
         <Image

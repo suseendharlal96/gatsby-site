@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import Title from "./Title"
-import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 
 const Jobs = ({ scrollToId }) => {

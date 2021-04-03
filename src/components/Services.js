@@ -6,7 +6,7 @@ import services from "../constants/services"
 const Services = ({ scrollToId }) => {
   return (
     <section className="section bg-grey">
-      <Title id="service" title="Tech's I've worked with" />
+      <Title id="service" title="Tech stack" />
       <div className="section-center services-center">
         {services.map(({ id, icon, title, text, css, url }) => (
           <Link key={id} to={url}>

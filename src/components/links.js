@@ -19,7 +19,7 @@ const data = [
   },
   {
     id: 4,
-    text: "contact",
+    text: "Get in touch",
     url: "/contact",
   },
 ]

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import TransitionLink from "gatsby-plugin-transition-link"
 
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"

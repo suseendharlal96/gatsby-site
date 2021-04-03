@@ -47,7 +47,7 @@ const About = () => {
               mongodb. As a good team player, I've developed websites using
               React(also Angular & Vue), Redux, Nodejs, Mongodb along with
               GraphQL from the scratch which includes all the authentication and
-              core stuffs for a website.
+              core stuffs for a website.Solved 200+ problems on Leetcode as I love to solve logical problems.
             </p>
             <p>
               Strong knowledge on: HTML, CSS, JS, Reactjs, Redux, Angular7,
