@@ -1,6 +1,6 @@
 import React from "react"
 import { FaLinkedin } from "react-icons/fa"
-import { SiGmail } from "react-icons/si"
+import { SiGmail, SiLeetcode } from "react-icons/si"
 import { GoMarkGithub } from "react-icons/go"
 
 const data = [
@@ -16,6 +16,11 @@ const data = [
   },
   {
     id: 3,
+    icon: <SiLeetcode className="social-icon"></SiLeetcode>,
+    url: "https://leetcode.com/lssuseendharlal/",
+  },
+  {
+    id: 4,
     icon: <SiGmail className="social-icon"></SiGmail>,
     url: "mailto:lssuseendharlal@gmail.com/",
   },
