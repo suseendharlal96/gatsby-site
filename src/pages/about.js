@@ -15,8 +15,22 @@ const About = () => {
           }
         }
       }
+      aboutme: allContentfulAboutMe {
+        nodes {
+          aboutMe {
+            childMarkdownRemark {
+              html
+            }
+          }
+        }
+      }
     }
   `)
+  const {
+    aboutMe: {
+      childMarkdownRemark: { html: aboutMe },
+    },
+  } = data && data.aboutme && data.aboutme.nodes[0]
   const stack = [
     { id: "1", title: "HTML" },
     { id: "2", title: "CSS" },
@@ -40,20 +54,7 @@ const About = () => {
           />
           <article className="about-text">
             <Title title="About Me" />
-            <p>
-              I'm a Full~Stack developer and I take responsibility of developing
-              responsive sites using HTML, CSS and JS along with latest
-              frameworks and libraries like Reactjs, redux, angular7,Nodejs,
-              mongodb. As a good team player, I've developed websites using
-              React(also Angular & Vue), Redux, Nodejs, Mongodb along with
-              GraphQL from the scratch which includes all the authentication and
-              core stuffs for a website.Solved 200+ problems on Leetcode as I love to solve logical problems.
-            </p>
-            <p>
-              Strong knowledge on: HTML, CSS, JS, Reactjs, Redux, Angular7,
-              Nodejs, Mongodb, GatsbyJS(React static site generator),
-              GraphQL(Apollo GraphQL), Vuejs & Chartjs.
-            </p>
+            {aboutMe && <div dangerouslySetInnerHTML={{ __html: aboutMe }} />}
             <div className="about-stack">
               {stack.map(item => {
                 return <span key={item.id}>{item.title}</span>

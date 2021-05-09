@@ -28,7 +28,6 @@ const MyLink = ({ toggle, styleClass }) => {
   const [active, setActive] = useState("")
   useEffect(() => {
     if (typeof window !== undefined) {
-      console.log(window.location.pathname)
       setActive(window.location.pathname)
     }
     return () => window !== undefined && window.location.pathname

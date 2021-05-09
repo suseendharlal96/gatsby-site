@@ -30,7 +30,6 @@ const Jobs = ({ scrollToId }) => {
       childMarkdownRemark: { html },
     },
   } = data.jobs.nodes[value]
-  console.log(html)
   return (
     <section id="jobs" className="content-animate section-jobs">
       <Title title="Experience" />
