@@ -9,7 +9,7 @@ const contact = () => {
     <Layout>
       <SEO title="Contact Me" />
       <section className="content-animate contact-page">
-        <a href="tel:+91-80125-43335" className="social-link">
+        <a href="tel:+91-79042-17073" className="social-link">
           <FiPhoneCall className="social-icon"></FiPhoneCall>
         </a>
         <h3 style={{ textAlign: "center", padding: "0px 10px 12px" }}>
