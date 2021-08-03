@@ -10,10 +10,10 @@ const Services = ({ scrollToId }) => {
       <div className="section-center services-center">
         {services.map(({ id, icon, title, text, css, url }) => (
           <Link key={id} to={url}>
-            <article className={`service service-${css}`}>
-              {icon}
+            <div className={`service service-${css}`}>
+              <img src={icon} alt={title} style={{ width: "20%" }} />
               <h4>{title}</h4>
-            </article>
+            </div>
           </Link>
         ))}
         <button

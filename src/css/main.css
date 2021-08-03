@@ -667,41 +667,41 @@ Services
   color: #fff;
 }
 .service {
-  background: var(--clr-primary-blue);
+  /* background: var(--clr-primary-blue); */
   color: #fff;
   /* min-height: 355px; */
 }
 .service-react {
-  background: #61dafb;
+  /* background: #61dafb; */
   cursor: pointer;
 }
 .service-angular {
-  background: var(--clr-red-dark);
+  /* background: var(--clr-red-dark); */
   cursor: pointer;
 }
 .service-vue {
-  background: var(--clr-green-dark);
+  /* background: var(--clr-green-dark); */
   cursor: pointer;
 }
 .service-node {
-  background: darkgreen;
+  /* background: darkgreen; */
   cursor: pointer;
 }
 .service-mongo {
-  background: green;
+  /* background: green; */
   cursor: pointer;
 }
 .service-gatsby {
-  background: purple;
+  /* background: purple; */
   cursor: pointer;
 }
 .service-apollo {
-  background: gray;
+  /* background: gray; */
   cursor: pointer;
 }
 .service-next {
   word-break: break-word;
-  background: darkturquoise;
+  /* background: darkturquoise; */
   cursor: pointer;
 }
 .service-react:hover {
