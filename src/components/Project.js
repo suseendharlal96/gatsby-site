@@ -1,7 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
-import { FaGithubSquare, FaShareSquare, FaRegCommentDots } from "react-icons/fa"
+import { FaRegCommentDots } from "react-icons/fa"
+import { FiExternalLink } from "react-icons/fi"
+import { GrGithub } from "react-icons/gr"
 import slugify from "../util/slugify"
 
 const Project = ({
@@ -63,10 +65,10 @@ const Project = ({
         </div>
         <div className="project-links">
           <a rel="noreferrer noopener" target="_blank" href={github}>
-            <FaGithubSquare title="github repo" className="project-icon" />
+            <GrGithub title="github repo" className="project-icon" />
           </a>
           <a rel="noreferrer noopener" target="_blank" href={live}>
-            <FaShareSquare title="live demo" className="project-icon" />
+            <FiExternalLink title="live demo" className="project-icon" />
           </a>
           <Link style={{ float: "right" }} to={`/projects/${slugify(title)}`}>
             <FaRegCommentDots
