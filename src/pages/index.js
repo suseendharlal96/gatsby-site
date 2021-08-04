@@ -37,9 +37,9 @@ export default () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Profile scrollToId={e => scrollToId(e)} />
-      <Services scrollToId={(e, id) => scrollToId(e, id)} />
-      <Jobs scrollToId={(e, id) => scrollToId(e, id)} />
+      <Profile />
+      <Services />
+      <Jobs />
       <Projects
         hideTag
         projects={featuredProjects.projects.nodes}

@@ -5,7 +5,7 @@ import Typist from "react-typist"
 import { graphql, useStaticQuery } from "gatsby"
 import Resume from "../assets/suseendhar_webDev.pdf"
 
-const Profile = ({ scrollToId }) => {
+const Profile = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "susee-bw.png" }) {
@@ -51,10 +51,7 @@ const Profile = ({ scrollToId }) => {
           style={{ left: "45px" }}
           className="hero-img"
         />
-        <button
-          className="content-animate nav-btn"
-          onClick={() => scrollToId("service")}
-        >
+        <button className="content-animate nav-btn">
           <div style={{ transform: "rotate(180deg)" }}>
             <span className="line-1"></span>
             <span className="line-2"></span>

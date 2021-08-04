@@ -651,6 +651,12 @@ Services
   transition: var(--transition);
   /* min-height: 300px; */
 }
+
+.stack-name {
+  font-size: 1.4rem;
+  color: var(--clr-primary-neon);
+}
+
 .service-icon {
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -745,7 +751,7 @@ Services
 }
 @media screen and (min-width: 992px) {
   .services-center {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 200px);
   }
 }
 

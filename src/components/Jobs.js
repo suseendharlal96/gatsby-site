@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import Title from "./Title"
 import { graphql, useStaticQuery } from "gatsby"
 
-const Jobs = ({ scrollToId }) => {
+const Jobs = () => {
   const data = useStaticQuery(graphql`
     query {
       jobs: allContentfulJobs(sort: { fields: mydate, order: ASC }) {
@@ -55,10 +55,7 @@ const Jobs = ({ scrollToId }) => {
           />
         </article>
       </div>
-      <button
-        className="content-animate job-scroll"
-        onClick={() => scrollToId("projects")}
-      >
+      <button className="content-animate job-scroll">
         <div style={{ transform: "rotate(180deg)" }}>
           <span className="line-1"></span>
           <span className="line-2"></span>
