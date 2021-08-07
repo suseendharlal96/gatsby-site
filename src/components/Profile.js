@@ -23,16 +23,16 @@ const Profile = () => {
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
-            <Typist cursor={{ show: false }}>
+            <Typist cursor={{ show: false }} avgTypingDelay={40}>
               <h1>Full Stack Developer</h1>
               <div className="underline"></div>
-              <h4>
+              <h4 style={{ lineHeight: "2" }}>
                 Hello, I'm Suseendhar. I love creating high quality websites and
                 apps that use the latest and greatest tools out there to
                 maximize UI and UX quality.
               </h4>
             </Typist>
-            <Link to="/contact" className="btn">
+            {/* <Link to="/contact" className="btn">
               contact me
             </Link>
             <a
@@ -43,7 +43,7 @@ const Profile = () => {
               target="__blank"
             >
               Résumé
-            </a>
+            </a> */}
           </div>
         </article>
         <Image

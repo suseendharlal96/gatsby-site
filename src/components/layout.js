@@ -4,20 +4,19 @@ import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 const Layout = ({ children }) => {
-  const [animate, setAnimate] = useState(true)
+  // const [animate, setAnimate] = useState(true)
   const [isOpen, setIsOpen] = useState(false)
-  const [header, setHeader] = useState(false)
+  const [scrollButton, setScrollButton] = useState(false)
   const toggleSidebar = () => {
     setIsOpen(!isOpen)
   }
   useEffect(() => {
     const setNavButton = () => {
       window.addEventListener("scroll", () => {
-        window.scrollY > 100 ? setHeader(true) : setHeader(false)
+        window.scrollY > 100 ? setScrollButton(true) : setScrollButton(false)
       })
     }
     setNavButton()
-    setAnimate(false)
     return () => {
       window.removeEventListener("scroll", setNavButton)
     }
@@ -29,7 +28,7 @@ const Layout = ({ children }) => {
       {/* <TransitionLink> */}
       <div>{children}</div>
       {/* </TransitionLink> */}
-      {header && (
+      {scrollButton && (
         <button
           className="content-animate scroll-btn"
           onClick={() => window.scroll({ top: 0, behavior: "smooth" })}
