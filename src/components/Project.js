@@ -8,6 +8,7 @@ import { FiExternalLink } from "react-icons/fi"
 import { GrGithub } from "react-icons/gr"
 
 import slugify from "../util/slugify"
+import { flipAnimate } from "../util/animateScroll"
 const Project = ({
   title,
   github,
@@ -22,9 +23,9 @@ const Project = ({
 }) => {
   return (
     <article
-      data-sal="fade"
-      // data-sal-delay="300"
-      data-sal-duration="200"
+      data-sal={flipAnimate()}
+      data-sal-delay="300"
+      // data-sal-duration="200"
       data-sal-easing="ease"
       className="project"
     >
