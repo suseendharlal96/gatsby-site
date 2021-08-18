@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Title from "./Title"
 import services from "../constants/services"
+import { slideAnimate } from "../util/animateScroll"
 const Services = () => {
   return (
     <section className="section bg-grey">
@@ -12,7 +13,13 @@ const Services = () => {
           <h3 className="section-title stack-name">{ser}</h3>
           <div className="section-center services-center">
             {services[ser].map(({ id, icon, title, css, url }) => (
-              <div key={id} className={`service`}>
+              <div
+                data-sal={slideAnimate()}
+                data-sal-delay="600"
+                data-sal-easing="ease"
+                key={id}
+                className={`service`}
+              >
                 <img src={icon} alt={title} style={{ width: "20%" }} />
                 <h4>{title}</h4>
               </div>

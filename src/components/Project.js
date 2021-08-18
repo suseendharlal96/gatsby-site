@@ -1,11 +1,13 @@
 import React from "react"
+
 import { Link } from "gatsby"
 import Image from "gatsby-image"
+
 import { FaRegCommentDots } from "react-icons/fa"
 import { FiExternalLink } from "react-icons/fi"
 import { GrGithub } from "react-icons/gr"
-import slugify from "../util/slugify"
 
+import slugify from "../util/slugify"
 const Project = ({
   title,
   github,
@@ -19,7 +21,13 @@ const Project = ({
   index,
 }) => {
   return (
-    <article className="project">
+    <article
+      data-sal="fade"
+      // data-sal-delay="300"
+      data-sal-duration="200"
+      data-sal-easing="ease"
+      className="project"
+    >
       {/* <Link to={index >= 0 ? `/projects/${slugify(title)}` : null}> */}
       {image && <Image fluid={image.fluid} className="project-img" />}
       {/* </Link> */}

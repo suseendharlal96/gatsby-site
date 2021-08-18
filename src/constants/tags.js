@@ -28,9 +28,15 @@ const tags = () => {
     "Snipcart",
   ]
   return (
-    <div className="tags-container">
+    <div
+      data-sal="slide-down"
+      data-sal-delay="300"
+      data-sal-easing="ease"
+      className="tags-container"
+    >
       <h4 style={{ color: "#00ffb4" }}>
-        Click on a tag to view projects based on tag<AiOutlineTag />
+        Click on a tag to view projects based on tag
+        <AiOutlineTag />
       </h4>
       {tags.map((item, index) => {
         return (

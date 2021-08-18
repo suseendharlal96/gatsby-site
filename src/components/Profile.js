@@ -23,9 +23,11 @@ const Profile = () => {
       <div className="section-center hero-center">
         <article className="hero-info">
           <div>
+            <h1 data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
+              Full Stack Developer
+            </h1>
+            <div className="underline"></div>
             <Typist cursor={{ show: false }} avgTypingDelay={40}>
-              <h1>Full Stack Developer</h1>
-              <div className="underline"></div>
               <h4 style={{ lineHeight: "2" }}>
                 Hello, I'm Suseendhar. I love creating high quality websites and
                 apps that use the latest and greatest tools out there to

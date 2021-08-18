@@ -33,7 +33,12 @@ const Jobs = () => {
   return (
     <section id="jobs" className="content-animate section-jobs">
       <Title title="Experience" />
-      <div className="jobs-center">
+      <div
+        data-sal="slide-right"
+        data-sal-delay="600"
+        data-sal-easing="ease"
+        className="jobs-center"
+      >
         <div className="btn-container">
           {data.jobs.nodes.map((job, index) => (
             <button

@@ -12,11 +12,21 @@ const contact = () => {
         <a href="tel:+91-79042-17073" className="social-link">
           <FiPhoneCall className="social-icon"></FiPhoneCall>
         </a>
-        <h3 style={{ textAlign: "center", padding: "0px 10px 12px" }}>
+        <h3
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+          style={{ textAlign: "center", padding: "0px 10px 12px" }}
+        >
           Whether you would like to hire me, further enquire about any of my
           work, or you just want to say hello, I would love to hear from you :)
         </h3>
-        <article className="contact-form">
+        <article
+          data-sal="slide-down"
+          data-sal-delay="500"
+          data-sal-easing="ease"
+          className="contact-form"
+        >
           <h3>get in touch</h3>
           <form action="https://formspree.io/xpzygegl" method="POST">
             <div className="form-group">

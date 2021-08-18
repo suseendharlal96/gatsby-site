@@ -49,12 +49,22 @@ const About = () => {
       <section className="content-animate about-page">
         <div className="section-center about-center">
           <Image
+            data-sal="slide-left"
+            data-sal-delay="500"
+            data-sal-easing="ease"
             fluid={data.file.childImageSharp.fluid}
             className="about-img"
           />
           <article className="about-text">
             <Title title="About Me" />
-            {aboutMe && <div dangerouslySetInnerHTML={{ __html: aboutMe }} />}
+            {aboutMe && (
+              <div
+                data-sal="slide-right"
+                data-sal-delay="500"
+                data-sal-easing="ease"
+                dangerouslySetInnerHTML={{ __html: aboutMe }}
+              />
+            )}
             <div className="about-stack">
               {stack.map(item => {
                 return <span key={item.id}>{item.title}</span>
