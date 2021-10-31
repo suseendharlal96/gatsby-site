@@ -8,9 +8,9 @@ import Resume from "../assets/suseendhar_webDev.pdf"
 const Profile = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "susee-bw.png" }) {
+      file(relativePath: { eq: "suseendharlal_id_photo.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 650, maxWidth: 650) {
+          fluid(maxHeight: 400, maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -50,7 +50,7 @@ const Profile = () => {
         </article>
         <Image
           fluid={data.file.childImageSharp.fluid}
-          style={{ left: "45px" }}
+          style={{ left: "95px" }}
           className="hero-img"
         />
         <button className="content-animate nav-btn">
