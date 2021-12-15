@@ -584,6 +584,7 @@ Hero
 }
 .hero-img {
   display: none;
+  height: 75%;
 }
 .hero-info h4 {
   color: #61dafb;
