@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const Jobs = () => {
   const data = useStaticQuery(graphql`
     query {
-      jobs: allContentfulJobs(sort: { fields: mydate, order: ASC }) {
+      jobs: allContentfulJobs(sort: { fields: name, order: DESC }) {
         nodes {
           id
           name
